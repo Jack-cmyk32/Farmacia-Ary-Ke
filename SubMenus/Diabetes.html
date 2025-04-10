@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Farmacia</title>
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+  <link rel="stylesheet" href="diabetes.css" />
+  <link rel="stylesheet" href="Bebe.css">
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <div class="left-info">
+        <span class="green-text">SALA DE VENTAS</span>
+        <span class="blue-text">FARMACIA</span>
+        <span class="separator">|</span>
+        <i class="fas fa-phone"></i>
+        <span class="phones">+503 2247-8888 | +503 6785-6432</span>
+      </div>
+      <div class="right-info">
+        <ul>
+          <li><a href="#">Rastrear paquete</a></li>
+          <img src="../rastreo.png" alt="Logo Izquierdo" class="side-image">
+          <li><a href="#">Aplica a Tarjeta</a></li>
+          <img src="../tarjeta-de-credito.png" alt="Logo Izquierdo" class="side-image">
+          <li><a href="#">Registro</a></li>
+          <img src="../tarjeta-de-credito.png" alt="Logo Izquierdo" class="side-image">
+          <li><a href="">Iniciar sesión</a></li>
+          <img src="../perfil-del-usuario.png" alt="Logo Izquierdo" class="side-image">
+        </ul>
+      </div>
+    </div>
+
+   <div class="main-bar">
+  
+    <div class="logo">
+      <a href="../index.html"><img src="../img/logo.png" alt="Logo Farmacia"></a>
+    </div>
+
+ 
+    <div class="account-cart">
+
+      <div class="cart-icon">
+        <a href="carrito.html">
+          <i class="fa fa-shopping-cart"></i>
+          <span id="cart-count"></span>
+        </a>
+      </div>
+    </div>
+  
+
+    <div class="search-container">
+      <div class="search-select-container">
+        <button class="search-dropdown-btn">
+          Buscar en <i class="fas fa-caret-down"></i>
+        </button>
+      </div>
+ 
+      <input 
+        type="text" 
+        class="search-input" 
+        placeholder="¿Qué producto está buscando?"
+      />
+
+      <button class="search-button">
+        <i class="fas fa-search"></i>
+      </button>
+    </div>
+  </div>
+
+
+  <div class="purchase-options">
+    <span>¿Cómo deseas comprar?</span>
+    <label>
+      <input type="radio" name="tipo-compra" value="domicilio" checked> 
+      A Domicilio
+    </label>
+    <label>
+      <input type="radio" name="tipo-compra" value="extranjero"> 
+      Envío al Extranjero
+    </label>
+    <label>
+      <input type="radio" name="tipo-compra" value="sucursal"> 
+      Recoger en Sucursal
+    </label>
+  </div>
+
+<nav class="nav-bar">
+  <ul>
+    <li class="has-dropdown">
+        <a href="../index.html">Categorías</a>
+        <ul class="dropdown">
+          <li><a href="Bebe.html">Bebé</a></li>
+          <li><a href="Diabetes.html">Hidratacion</a></li>
+          <li><a href="Cuidado.html">Cuidado Personal</a></li>
+        </ul>
+      </li>
+
+      <li class="has-dropdown">
+        <a href="Servicios.html">Servicios</a>
+        <ul class="dropdown">
+          <li><a href="Servicios.html">Consultoria Medico</a></li>
+        </ul>
+      </li>
+
+      <li class="has-dropdown">
+        <a href="Sucursal.html">Sucursales</a>
+        <ul class="dropdown">
+          <li><a href="Sucursal.html">Sucursal</a></li>
+        </ul>
+      </li>
+  
+      <li class="has-dropdown">
+        <a href="#">Beneficios</a>
+        <ul class="dropdown">
+          <li><a href="Beneficios.html">Mas</a></li>
+        </ul>
+      </li>
+      
+  </ul>
+</nav>
+
+
+  <!-- Barra de navegación -->
+  <div class="mobile-menu-btn">
+    <i class="fa fa-bars"></i>
+  </div>
+  <nav class="mobile-nav">
+    <ul>
+      <li class="has-dropdown">
+        <a href="../index.html" class="dropdown-toggle">Categorías</a>
+          <ul class="dropdown">
+            <li><a href="SubMenus/Bebe.html">Bebé</a></li>
+            <li><a href="SubMenus/Diabetes.html">Hidratacion</a></li>
+            <li><a href="SubMenus/Cuidado.html">Cuidado Personal</a></li>
+          </ul>
+        </li>
+
+        <li class="has-dropdown">
+          <a href="Servicios.html" class="dropdown-toggle">Servicios</a>
+          <ul class="dropdown">
+            <li><a href="SubMenus/Servicios.html">Consultorio Medico </a></li>
+          </ul>
+        </li>
+
+        <li class="has-dropdown">
+          <a href="Sucursal.html" class="dropdown-toggle">Sucursales</a>
+          <ul class="dropdown">
+            <li><a href="Sucursal.html">Sucursal</a></li>
+          </ul>
+        </li>
+  
+        <li class="has-dropdown">
+          <a href="Beneficios.html" class="dropdown-toggle">Beneficios</a>
+          <ul class="dropdown">
+            <li><a href="Beneficios.html">Mas</a></li>
+          </ul>
+        </li>
+    </ul>
+  </nav>
+</header>
+  
+<div class="container mt-4">
+  <h3 class="text-center mb-4">Productos para Piel y Belleza</h3>
+  <div class="row">
+
+    <div class="col-md-3 product-item">
+      <div class="card" 
+           data-id="17" 
+           data-name="Nuxe Crème Fraîche de Beauté" 
+           data-price="400.00" 
+           data-description="Una hidratante que hace honor a su nombre: fresca como una brisa francesa.
+           Textura ligera, aroma delicado y una sensación de confort instantáneo. Ideal para pieles que necesitan hidratación duradera sin sentirse pesadas. ¡Tu piel se la va a beber!" 
+           data-img="../img2/producto1.jpg">
+        <img src="../img2/producto1.jpg" class="card-img-center" alt=" Nuxe Crème Fraîche de Beauté" style="cursor: pointer;">
+        <div class="card-body text-center">
+          <h6 class="card-title"> Nuxe Crème Fraîche de Beauté</h6>
+          <p class="card-text">L. 400.00</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 product-item">
+      <div class="card" 
+           data-id="18" 
+           data-name="A-DERMA Biology Crème Légère Hidratante" 
+           data-price="320.00" 
+           data-description="Una joyita dermatológica para pieles frágiles que quieren mimo sin drama. Sin perfume, con 99% de origen natural y hecha con avena BIO Rhealba®, esta cremita ligera hidrata sin saturar." 
+           data-img="../img2/producto2.jpg">
+        <img src="../img2/producto2.jpg" class="card-img-center" alt=" Nuxe Crème Fraîche de Beauté" style="cursor: pointer;">
+        <div class="card-body text-center">
+          <h6 class="card-title"> A-DERMA Biology Crème Légère Hidratante</h6>
+          <p class="card-text">L. 320.00</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 product-item">
+      <div class="card" 
+           data-id="19" 
+           data-name="Avène Hydrance Optimale Légère" 
+           data-price="320.00" 
+           data-description="Una crema que es como un vaso de agua fría para tu piel... en pleno verano. 
+           Diseñada para pieles sensibles, normales a mixtas, esta hidratante ligera ofrece una hidratación duradera sin dejar sensación grasa. Su fórmula se absorbe rápido y deja la piel suave, fresca y calmada, gracias al agua termal de Avène —el secreto francés mejor guardado.." 
+           data-img="../img2/producto3.jpg">
+        <img src="../img2/producto3.jpg" class="card-img-center" alt="Avène Hydrance Optimale Légère" style="cursor: pointer;">
+        <div class="card-body text-center">
+          <h6 class="card-title">Avène Hydrance Optimale Légère</h6>
+          <p class="card-text">L. 320.00</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-md-3 product-item">
+      <div class="card" 
+           data-id="20" 
+           data-name="Avène Hydrance Optimale UV Riche" 
+           data-price="280.10" 
+           data-description="Esta joyita es una hidratante rica, ideal para piel seca a muy seca y sensible. Aporta una hidratación intensa sin ser pegajosa, y además tiene protección solar SPF 20, perfecta para esos días en los que te da pereza aplicar mil cosas." 
+           data-img="../img2/producto4.jpg">
+        <img src="../img2/producto4.jpg" class="card-img-center" alt="Avène Hydrance Optimale UV Riche" style="cursor: pointer;">
+        <div class="card-body text-center">
+          <h6 class="card-title">Avène Hydrance Optimale UV Riche</h6>
+          <p class="card-text">L. 280.10</p>
+        </div>
+      </div>
+    </div>
+
+        <p></p>
+    <div class="col-md-3 product-item">
+      <div class="card" 
+           data-id="21" 
+           data-name=" A-DERMA Exomega DEFI Bálsamo Emoliente" 
+           data-price="290.80" 
+           data-description="Este bálsamo es una joya dermatológica que hidrata, calma y repara sin perfumes, sin conservantes y con la famosa avena Rhealba®. Su fórmula está diseñada para cuidar hasta las pieles más exigentes, incluso la de los bebés. ¡Y sirve tanto para cara como cuerpo!" 
+           data-img="../img2/producto5.jpg">
+        <img src="../img2/producto5.jpg" class="card-img-center" alt="A-DERMA Exomega DEFI Bálsamo Emoliente" style="cursor: pointer;">
+        <div class="card-body text-center">
+          <h6 class="card-title"> A-DERMA Exomega DEFI Bálsamo Emoliente</h6>
+          <p class="card-text">L. 290.80</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 product-item">
+      <div class="card" 
+           data-id="22" 
+           data-name="NUXE Merveillance Lift – Firming Velvet Cream" 
+           data-price="160.00" 
+           data-description="Con una textura aterciopelada que se siente como lujo puro, esta crema está pensada para corregir arrugas y reafirmar visiblemente la piel. Su fórmula con ingredientes de origen natural y efecto lifting inmediato deja el rostro más liso, tonificado y con ese glow francés que no se compra... salvo que uses Nuxe." 
+           data-img="../img2/producto6.jpg">
+        <img src="../img2/producto6.jpg" class="card-img-center" alt="NUXE Merveillance Lift – Firming Velvet Cream" style="cursor: pointer;">
+        <div class="card-body text-center">
+          <h6 class="card-title">NUXE Merveillance Lift – Firming Velvet Cream</h6>
+          <p class="card-text">L. 160.00</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 product-item">
+      <div class="card" 
+           data-id="23" 
+           data-name="Neutrogena Visibly Renew Loción Corporal" 
+           data-price="170.20" 
+           data-description="Esta loción corporal está formulada especialmente para piel seca con pérdida de elasticidad. Contiene minerales activos que ayudan a mejorar visiblemente la firmeza y restaurar la hidratación profunda desde la primera semana de uso. Y lo mejor: ¡viene en formato 2x1 de 750 ml cada uno! O sea, hidratación para rato sin romper la alcancía." 
+           data-img="../img2/producto7.jpg">
+        <img src="../img2/producto7.jpg" class="card-img-center" alt="Neutrogena Visibly Renew Loción Corporal" style="cursor: pointer;">
+        <div class="card-body text-center">
+          <h6 class="card-title">Neutrogena Visibly Renew Loción Corporal</h6>
+          <p class="card-text">L. 170.20</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 product-item">
+      <div class="card" 
+           data-id="24" 
+           data-name="CeraVe Loción Hidratante – Para piel seca a muy seca" 
+           data-price="240.20" 
+           data-description="Esta loción hidratante es como un escudo invisible de humectación que dura 24 horas. Enriquecida con ceramidas esenciales y ácido hialurónico, ayuda a restaurar la barrera natural de la piel sin dejar sensación grasa. Y sí, es sin perfume, porque a veces lo mejor es lo que no se nota." 
+           data-img="../img2/producto8.jpg">
+        <img src="../img2/producto8.jpg" class="card-img-center" alt="CeraVe Loción Hidratante – Para piel seca a muy seca" style="cursor: pointer;">
+        <div class="card-body text-center">
+          <h6 class="card-title">CeraVe Loción Hidratante – Para piel seca a muy seca</h6>
+          <p class="card-text">L. 240.20</p>
+        </div>
+      </div>
+    </div>
+
+    <p></p>
+
+    <div class="col-md-3 product-item">
+      <div class="card" 
+           data-id="25" 
+           data-name="CeraVe Hydrating Foaming Oil Cleanser" 
+           data-price="340.10" 
+           data-description="El equilibrio perfecto entre limpieza y apapacho. Porque sí, limpiar la piel no tiene por qué resecarla. 
+           Este limpiador en aceite espumoso hidratante es ideal para piel normal a muy seca, incluso las más sensibles. Limpia suave pero a fondo, mientras mantiene tu barrera cutánea feliz gracias a su fórmula con ceramidas, glicerina y escualano." 
+           data-img="../img2/producto9.jpg">
+        <img src="../img2/producto9.jpg" class="card-img-center" alt="CeraVe Hydrating Foaming Oil Cleanser" style="cursor: pointer;">
+        <div class="card-body text-center">
+          <h6 class="card-title">CeraVe Hydrating Foaming Oil Cleanser</h6>
+          <p class="card-text">L. 340.10</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 product-item">
+      <div class="card" 
+           data-id="26" 
+           data-name="Farmacia Ferrer – Hidratante Intensiva" 
+           data-price="220.50" 
+           data-description="Minimalismo de empaque, pero con una fórmula que no se anda con rodeos. Diseñada para piel sensible de normal a mixta, esta crema es una bomba de hidratación que combina lo mejor de la ciencia y la naturaleza." 
+           data-img="../img2/producto10.jpg">
+        <img src="../img2/producto10.jpg" class="card-img-center" alt="Farmacia Ferrer – Hidratante Intensiva" style="cursor: pointer;">
+        <div class="card-body text-center">
+          <h6 class="card-title">Farmacia Ferrer Hidratante Intensiva</h6>
+          <p class="card-text">L. 220.50</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 product-item">
+      <div class="card" 
+           data-id="27" 
+           data-name="Set Suavinex Cuidado de Piel" 
+           data-price="300.10" 
+           data-description="Este kit es el compañero ideal para las rutinas de cuidado diario. Incluye productos esenciales para la delicada piel del bebé, presentados en una práctica y encantadora bolsita de tela que combina estilo y funcionalidad. Perfecto para llevar de paseo o tener todo a mano en casa.
+           Porque consentir a tu bebé no debería requerir malabares." 
+           data-img="../img2/producto11.jpg">
+        <img src="../img2/producto11.jpg" class="card-img-center" alt="Set Suavinex Cuidado de Piel" style="cursor: pointer;">
+        <div class="card-body text-center">
+          <h6 class="card-title">Set Suavinex Cuidado de Piel</h6>
+          <p class="card-text">L. 300.10</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 product-item">
+      <div class="card" 
+           data-id="28" 
+           data-name="ISDIN A.G.E. Reverse" 
+           data-price="260.00" 
+           data-description="Esta crema facial antiedad combina potentes ingredientes para hidratar, reafirmar y revitalizar tu piel. Con su acción antipolución, remodeladora y antiglicación, es ideal para pieles que quieren lucir radiantes y bien cuidadas." 
+           data-img="../img2/producto12.jpg">
+        <img src="../img2/producto12.jpg" class="card-img-center" alt="ISDIN A.G.E. Reverse" style="cursor: pointer;">
+        <div class="card-body text-center">
+          <h6 class="card-title">ISDIN A.G.E. Reverse</h6>
+          <p class="card-text">L. 260.00</p>
+        </div>
+      </div>
+    </div>
+
+    <p></p>
+    <div class="col-md-3 product-item">
+      <div class="card" 
+           data-id="29" 
+           data-name="La Roche-Posay Hydraphase Intense Riche" 
+           data-price="350.00" 
+           data-description="La hidratación profunda se pone seria con esta crema, ideal para piel seca o deshidratada que necesita amor urgente y duradero." 
+           data-img="../img2/producto13.jpg">
+        <img src="../img2/producto13.jpg" class="card-img-center" alt="La Roche-Posay Hydraphase Intense Riche" style="cursor: pointer;">
+        <div class="card-body text-center">
+          <h6 class="card-title">La Roche-Posay Hydraphase Intense Riche</h6>
+          <p class="card-text">L. 350.00</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 product-item">
+      <div class="card" 
+           data-id="30" 
+           data-name="Klorane Crema Ligera Calmante con Peonía BIO" 
+           data-price="170.00" 
+           data-description="Tan suave como un pétalo y perfecta para piel sensible que se irrita con solo mirarla.
+           Con extracto de peonía BIO, esta crema ligera calma la piel desde la primera aplicación, reduciendo rojeces, molestias y esa sensación de “me arde todo”. Además, su fórmula es natural, orgánica y respetuosa, ideal para quienes buscan belleza sin complicaciones." 
+           data-img="../img2/producto14.jpg">
+        <img src="../img2/producto14.jpg" class="card-img-center" alt="Klorane Crema Ligera Calmante con Peonía BIO" style="cursor: pointer;">
+        <div class="card-body text-center">
+          <h6 class="card-title">Klorane Crema Ligera Calmante con Peonía BIO</h6>
+          <p class="card-text">L. 170.00</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 product-item">
+      <div class="card" 
+           data-id="31" 
+           data-name="Klorane Cornflower Water Cream" 
+           data-price="220.00" 
+           data-description="Formulada con agua de aciano BIO y ácido hialurónico vegetal, ofrece una hidratación intensa sin sensación pesada. Es ideal para piel deshidratada, apagada o sensible, y su textura tipo gel-crema se funde como si fuera agua.." 
+           data-img="../img2/KLORANE.png">
+        <img src="../img2/KLORANE.png" class="card-img-center" alt="Klorane Cornflower Water Cream" style="cursor: pointer;">
+        <div class="card-body text-center">
+          <h6 class="card-title">Klorane Cornflower Water Cream</h6>
+          <p class="card-text">L. 220.00</p>
+        </div>
+      </div>
+    </div>
+      
+    <div class="col-md-3 product-item">
+      <div class="card" 
+           data-id="32" 
+           data-name="Eucerin pH5 Loción Hidratante Ultraligera" 
+           data-price="170.00" 
+           data-description="Diseñada especialmente para piel seca y sensible, esta loción no solo hidrata, repara. Su fórmula con pH Balance System ayuda a restablecer las defensas naturales de la piel, reduciendo la reactividad ante agentes externos." 
+           data-img="../img2/EUCERIN png.png">
+        <img src="../img2/EUCERIN png.png" class="card-img-center" alt="Eucerin pH5 Loción Hidratante Ultraligera" style="cursor: pointer;">
+        <div class="card-body text-center">
+          <h6 class="card-title">Eucerin pH5 Loción Hidratante Ultraligera</h6>
+          <p class="card-text">L. 170.00</p>
+        </div>
+      </div>
+    </div>
+      
+    </div>
+</div>
+
+<div class="modal fade" id="dynamicModal" tabindex="-1" aria-labelledby="dynamicModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="dynamicModalLabel"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+        <div class="modal-body d-flex flex-wrap">
+        <div class="col-md-6 text-center">
+          <img id="modalImage" src="" alt="" style="max-width: 100%;">
+        </div>
+        <div class="col-md-6">
+          <p id="modalDescription"></p>
+          <p id="modalPrecio"></p>
+          <label for="modalCantidad">Cantidad:</label>
+          <input type="number" id="modalCantidad" value="1" min="1" class="form-control" style="width:100px;margin-bottom:10px;">
+          <button class="btn btn-primary" id="btnAgregarCarrito">Agregar al carrito</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p></p>
+
+<footer>
+<div class="footer-top-border"></div>
+<div class="footer-content">
+  <div class="footer-column">
+    <h3>ENLACES</h3>
+    <ul>
+      <li><a href="#">Contáctanos</a></li>
+      <li><a href="#">Regístrate</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-column">
+    <h3>SÍGUENOS</h3>
+    <ul>
+      <li><a href="https://www.facebook.com/p/Venta-de-Medicamentos-Ary-Ke-100051160614467/"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
+      <li><a href=" "><i class="fa-brands fa-twitter"></i> Twitter</a></li>
+      <li><a href="https://juano8a.wixsite.com/website"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-column">
+    <h3>ATENCIÓN AL CLIENTE</h3>
+    <ul>
+      <li>Ubicación de Farmacias</li>
+      <li>Contáctanos a: <a href="mailto:sc@puntofarm.com">sc@puntofarm.com</a></li>
+      <li>Línea de atención: 2200-8800</li>
+    </ul>
+  </div>
+
+
+  <div class="footer-column certification">
+    <h3>NUESTRA CERTIFICACIÓN</h3>
+    <img src="../img/certi.png" alt="LegiScript Certified">
+  </div>
+
+  <div class="footer-column">
+    <h3>ACEPTAMOS</h3>
+    <div class="payment-logos">
+      <img src="../img/bac.png" alt="BAC">
+      <img src="../img/VISA.png" alt="Visa">
+      <img src="../img/master.png" alt="Mastercard">
+      <img src="../img/banpis.png" alt="BanPais">
+    </div>
+  </div>
+</div>
+
+<div class="footer-bottom">
+  <ul>
+    <li><a href="#">Mapa del Sitio</a></li>
+    <li><a href="#">Términos y Condiciones</a></li>
+    <li><a href="#">Política de protección de datos personales</a></li>
+  </ul>
+  <p>© 2025 - 2026 Universidad de San Pedro Sula</p>
+</div>
+
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+  
+      
+      function filtrarProductos() {
+          var terminoBusqueda = $('.search-input').val().toLowerCase().trim();
+          $('.product-item').each(function() {
+            
+              var nombreProducto = $(this).find('.card').data('name') || $(this).find('.card-title').text();
+              if (nombreProducto) {
+                  nombreProducto = nombreProducto.toLowerCase();
+                  $(this).toggle(nombreProducto.indexOf(terminoBusqueda) > -1);
+              }
+          });
+      }
+  
+      
+      $('.search-button').on('click', filtrarProductos);
+      $('.search-input').on('input', filtrarProductos);
+  
+  });
+  </script>
+
+
+<script>  
+  function updateCartCount() {
+    let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    const totalCount = cartItems.reduce((acc, item) => acc + item.quantity, 0);
+    const cartCountEl = document.getElementById('cart-count');
+    if (cartCountEl) {
+      cartCountEl.textContent = totalCount;
+    }
+  }
+
+  updateCartCount();
+
+  let currentProduct = {};
+
+  document.querySelectorAll('.product-item .card img').forEach(img => {
+    img.addEventListener('click', function() {
+      const card = this.closest('.card');
+      const id = card.getAttribute('data-id');
+      const name = card.getAttribute('data-name');
+      const price = parseFloat(card.getAttribute('data-price'));
+      const description = card.getAttribute('data-description') || '';
+      const imgSrc = card.getAttribute('data-img') || this.getAttribute('src');
+
+      currentProduct = { id, name, price, description, image: imgSrc };
+
+      document.getElementById('dynamicModalLabel').textContent = name;
+      document.getElementById('modalImage').src = imgSrc;
+      document.getElementById('modalDescription').textContent = description;
+      document.getElementById('modalPrecio').textContent = 'L. ' + price.toFixed(2);
+      document.getElementById('modalCantidad').value = 1;
+
+      const modal = new bootstrap.Modal(document.getElementById('dynamicModal'));
+      modal.show();
+    });
+  });
+
+  document.getElementById('btnAgregarCarrito').addEventListener('click', function() {
+    const quantity = parseInt(document.getElementById('modalCantidad').value) || 1;
+    const productToAdd = { ...currentProduct, quantity };
+
+    let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    const existingIndex = cartItems.findIndex(item => item.id === productToAdd.id);
+
+    if (existingIndex !== -1) {
+        cartItems[existingIndex].quantity += quantity;
+    } else {
+        cartItems.push(productToAdd);
+    }
+
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    updateCartCount();
+
+    // Obtener id del usuario desde localStorage
+    const userId = localStorage.getItem('user_id');
+    if (!userId) {
+      alert("Error: no se encontró el ID del usuario.");
+      return;
+    }
+
+    // Guardar producto y carrito en la base de datos
+    const data = new FormData();
+    data.append('nombre', currentProduct.name);
+    data.append('precio', currentProduct.price);
+    data.append('descripcion', currentProduct.description);
+    data.append('imagen', currentProduct.image);
+    data.append('id_usuario', userId);
+    data.append('id_producto', currentProduct.id); // Puede ser usado para verificar si ya existe
+    data.append('cantidad', quantity);
+
+    fetch('/Pagina_Web/guardar_producto.php', {
+        method: 'POST',
+        body: data
+    })
+    .then(res => res.text())
+    .then(response => {
+        console.log('Respuesta del servidor:', response);
+    }).catch(error => {
+        console.error('Error al guardar:', error);
+    });
+
+    alert("Producto agregado al carrito");
+
+    const modalElement = document.getElementById('dynamicModal');
+    const modalInstance = bootstrap.Modal.getInstance(modalElement);
+    modalInstance.hide();
+  });
+</script>
+
+<div id="chatbot-container">
+  <div id="chatbot-header">Asistente Virtual</div>
+  <div id="chatbot-messages"></div>
+  <div id="chatbot-input-container">
+    <input type="text" id="chatbot-input" placeholder="Escribe tu mensaje...">
+    <button id="chatbot-send">Enviar</button>
+  </div>
+</div>
+
+<button id="chatbot-toggle" aria-label="Abrir chat"><i class="fa-solid fa-comment-dots"></i></button>
+
+ 
+<script>
+   
+  const chatbotToggle = document.getElementById('chatbot-toggle');
+  const chatbotContainer = document.getElementById('chatbot-container');
+  const chatbotMessages = document.getElementById('chatbot-messages');
+  const chatbotInput = document.getElementById('chatbot-input');
+  const chatbotSend = document.getElementById('chatbot-send');
+
+   
+  chatbotToggle.addEventListener('click', () => {
+    chatbotContainer.style.display = (chatbotContainer.style.display === 'flex') ? 'none' : 'flex';
+  });
+
+  
+  function addMessage(text, sender = 'bot') {
+    const messageDiv = document.createElement('div');
+    messageDiv.classList.add('chatbot-message', sender);
+    messageDiv.textContent = text;
+    chatbotMessages.appendChild(messageDiv);
+    chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+  }
+ 
+  function locateProduct(productQuery) {
+    let found = false;
+ 
+    $('.product-item').each(function() {
+      let productName = $(this).find('.card').data('name') || $(this).find('.card-title').text();
+      if (productName.toLowerCase().includes(productQuery)) {
+      
+        $(this).addClass('highlight-product');
+        $('html, body').animate({ scrollTop: $(this).offset().top - 100 }, 800);
+        
+        setTimeout(() => {
+          $(this).removeClass('highlight-product');
+        }, 2000);
+        found = true;
+        return false;  
+      }
+    });
+    return found;
+  }
+  function getChatbotResponse(userMessage) {
+    const message = userMessage.toLowerCase();
+
+    if (message.includes("ubicar") || message.includes("localiza") || message.includes("dónde está") || message.includes("mostrar")) {
+      
+      let productQuery = message.replace(/(ubicar|localiza|dónde está|mostrar|el|la|los|las)/g, "").trim();
+      if (locateProduct(productQuery)) {
+        return `He localizado el producto "${productQuery}" en nuestra sección, desplazándome hacia él.`;
+      } else {
+        return `No pude encontrar un producto que coincida con "${productQuery}".`;
+      }
+    }
+    if (message.includes("hola") || message.includes("buenos")) {
+      return "¡Hola! Soy tu asistente virtual. Puedes preguntarme por productos, precios, promociones o pedirme que ubique algún producto.";
+    }
+    if (message.includes("precio")) {
+      return "Nuestros precios varían según el producto. Por ejemplo, algunos de nuestros productos inician en L. 90. ¿Hay algo en particular que buscas?";
+    }
+    if (message.includes("producto") || message.includes("productos")) {
+      return "Contamos con una amplia variedad de productos, desde medicamentos hasta artículos de cuidado personal. ¿Te interesa algo en específico?";
+    }
+    if (message.includes("promoción") || message.includes("oferta")) {
+      return "Actualmente tenemos ofertas exclusivas en algunos productos de cuidado. ¿Quieres conocer más sobre alguna promoción en particular?";
+    }
+    if (message.includes("horario")) {
+      return "Nuestro horario de atención es de 8:00 AM a 8:00 PM de lunes a sábado y de 9:00 AM a 2:00 PM los domingos.";
+    }
+    if (message.includes("dónde") || message.includes("ubicación") || message.includes("dirección")) {
+      return "Estamos ubicados en el centro de la ciudad, en la avenida principal. ¿Necesitas indicaciones?";
+    }
+    return "Lo siento, aún estoy aprendiendo y no entiendo completamente la pregunta. ¿Podrías reformularla o ser más específico?";
+  }
+  function sendMessage() {
+    const userMessage = chatbotInput.value.trim();
+    if (!userMessage) return;
+    addMessage(userMessage, 'user');
+    chatbotInput.value = "";
+    setTimeout(() => {
+      const response = getChatbotResponse(userMessage);
+      addMessage(response, 'bot');
+    }, 500);
+  }
+
+  chatbotSend.addEventListener('click', sendMessage);
+  chatbotInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') sendMessage();
+  });
+ 
+  addMessage("¡Bienvenido a Farmacia Ary-Ke! Pregunta por nuestros productos, precios, promociones o pídeme que te ubique algún producto.", 'bot');
+</script>
+
+<script>
+  const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+  const mobileNav = document.querySelector('.mobile-nav');
+
+  mobileMenuBtn.addEventListener('click', () => {
+    if (mobileNav.style.display === 'block') {
+      mobileNav.style.display = 'none';
+    } else {
+      mobileNav.style.display = 'block';
+    }
+  });
+
+  const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+  dropdownToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault(); 
+      e.stopPropagation();
+
+      const parentLi = toggle.closest('.has-dropdown');
+      parentLi.classList.toggle('open');
+    });
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.has-dropdown') && !e.target.closest('.mobile-menu-btn')) {
+      document.querySelectorAll('.has-dropdown.open').forEach(openLi => {
+        openLi.classList.remove('open');
+      });
+    }
+  });
+</script>
+
+<script>
+
+  const desktopDropdowns = document.querySelectorAll('.nav-bar .has-dropdown');
+
+  desktopDropdowns.forEach(dropdown => {
+    const link = dropdown.querySelector('a');
+
+   
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      document.querySelectorAll('.nav-bar .has-dropdown.open').forEach(openItem => {
+        if (openItem !== dropdown) {
+          openItem.classList.remove('open');
+        }
+      });
+
+      dropdown.classList.toggle('open');
+    });
+  });
+
+
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.nav-bar .has-dropdown')) {
+      document.querySelectorAll('.nav-bar .has-dropdown.open').forEach(openItem => {
+        openItem.classList.remove('open');
+      });
+    }
+  });
+</script>
+
+
+
+<script src="../script.js"></script>
+ 

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Farmacia</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+  <link rel="stylesheet" href="Sucursal.css" />
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Open+Sans:400,600&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <header>
+    <div class="top-bar">
+      <div class="left-info">
+        <span class="green-text">SALA DE VENTAS</span>
+        <span class="blue-text">FARMACIA</span>
+        <span class="separator">|</span>
+        <i class="fas fa-phone"></i>
+        <span class="phones">+503 2247-8888 | +503 6785-6432</span>
+      </div>
+      <div class="right-info">
+        <ul>
+            <li><a href="#">Rastrear paquete</a></li>
+            <img src="../rastreo.png" alt="Logo Izquierdo" class="side-image">
+            <li><a href="#">Aplica a Tarjeta</a></li>
+            <img src="../tarjeta-de-credito.png" alt="Logo Izquierdo" class="side-image">
+            <li><a href="#">Registro</a></li>
+            <img src="../tarjeta-de-credito.png" alt="Logo Izquierdo" class="side-image">
+            <li><a href="">Iniciar sesión</a></li>
+            <img src="../perfil-del-usuario.png" alt="Logo Izquierdo" class="side-image">
+        </ul>
+      </div>
+    </div>
+  
+    <div class="main-bar">
+      <div class="logo">
+        <a href="../index.html"><img src="../img/logo.png" alt="Logo Farmacia"></a>
+      </div>
+  
+      <div class="account-cart">
+
+        <div class="cart-icon">
+          <a href="./SubMenus/carrito.html">
+            <i class="fa fa-shopping-cart"></i>
+            <span id="cart-count"></span>
+          </a>
+        </div>
+      </div>
+  
+      <div class="search-container">
+        <div class="search-select-container">
+          <button class="search-dropdown-btn">
+            Buscar en <i class="fas fa-caret-down"></i>
+          </button>
+        </div>
+
+        <input 
+          type="text" 
+          class="search-input" 
+          placeholder="¿Qué producto está buscando?"
+        />
+      
+        <button class="search-button">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+    </div>
+  
+
+    <div class="purchase-options">
+      <span>¿Cómo deseas comprar?</span>
+      <label>
+        <input type="radio" name="tipo-compra" value="domicilio" checked> 
+        A Domicilio
+      </label>
+      <label>
+        <input type="radio" name="tipo-compra" value="extranjero"> 
+        Envío al Extranjero
+      </label>
+      <label>
+        <input type="radio" name="tipo-compra" value="sucursal"> 
+        Recoger en Sucursal
+      </label>
+    </div>
+
+    <nav class="nav-bar">
+      <ul>
+        <li class="has-dropdown">
+            <a href="SubMenus/Bebe.html">Categorías</a>
+            <ul class="dropdown">
+              <li><a href="../SubMenus/Bebe.html">Bebé</a></li>
+              <li><a href="../SubMenus/Diabetes.html">Hidratacion</a></li>
+              <li><a href="../SubMenus/Cuidado.html">Cuidado Personal</a></li>
+            </ul>
+          </li>
+  
+          <li class="has-dropdown">
+            <a href="#">Servicios</a>
+            <ul class="dropdown">
+              <li><a href="Servicios.html">Consultorio Medico</a></li>
+            </ul>
+          </li>
+  
+          <li class="has-dropdown">
+            <a href="#">Sucursales</a>
+            <ul class="dropdown">
+              <li><a href="#">Sucursal</a></li>
+            </ul>
+          </li>
+  
+          <li class="has-dropdown">
+            <a href="#">Beneficios</a>
+            <ul class="dropdown">
+              <li><a href="Beneficios.html">Mas</a></li>
+            </ul>
+          </li>
+      </ul>
+    </nav>
+  
+    <div class="mobile-menu-btn">
+      <i class="fa fa-bars"></i>
+    </div>
+    <nav class="mobile-nav">
+      <ul>
+        <li class="has-dropdown">
+          <a href="#" class="dropdown-toggle">Categorías</a>
+            <ul class="dropdown">
+              <li><a href="Bebe.html">Bebé</a></li>
+              <li><a href="SubMenus/Diabetes.html">Hidratacion</a></li>
+              <li><a href="SubMenus/Cuidado.html">Cuidado Personal</a></li>
+            </ul>
+          </li>
+
+          <li class="has-dropdown">
+            <a href="#" class="dropdown-toggle">Servicios</a>
+            <ul class="dropdown">
+              <li><a href="Servicios.html">Consultorio Medico </a></li>
+            </ul>
+          </li>
+
+          <li class="has-dropdown">
+            <a href="Sucursal.html" class="dropdown-toggle">Sucursales</a>
+            <ul class="dropdown">
+              <li><a href="Sucursal.html">Sucursal</a></li>
+            </ul>
+          </li>
+    
+          <li class="has-dropdown">
+            <a href="#" class="dropdown-toggle">Beneficios</a>
+            <ul class="dropdown">
+              <li><a href="Beneficios.html">Mas</a></li>
+            </ul>
+          </li>
+      </ul>
+    </nav>
+  </header>
+</header>
+
+ <section id="info" class="info">
+    <h2>Bienvenido a Surcursal</h2>
+    <p>En Surcursal, nos esforzamos por ofrecer una experiencia única en el mundo de la salud y la atención farmacéutica. Nuestro establecimiento combina un ambiente elegante con tecnología de punta y un equipo profesional comprometido a cuidar de tu bienestar.</p>
+    <p>Nuestros servicios y beneficios incluyen:</p>
+    <ul>
+      <li>Consultas farmacéuticas personalizadas y asesoramiento en salud.</li>
+      <li>Gestión integral de medicamentos y seguimiento de tratamientos.</li>
+      <li>Acceso a productos innovadores y complementos nutricionales de alta calidad.</li>
+      <li>Servicio de entrega a domicilio y asesoría en salud digital.</li>
+      <li>Programas de fidelidad con descuentos exclusivos y promociones especiales.</li>
+      <li>Espacios de consulta modernos y confortables para tu comodidad.</li>
+    </ul>
+    <p>Nuestra misión es brindar atención integral en un entorno cálido y profesional, donde cada detalle está pensado para mejorar tu calidad de vida.</p>
+  </section>
+
+  <section id="contacto" class="info">
+    <h2>Contacto</h2>
+    <p>Para consultas, agendar citas o recibir más información, contáctanos:</p>
+    <p>Email: info@surculsal.com | Tel.: +504 9589-5112</p>
+  </section>
+
+  <footer>
+    <div class="footer-top-border"></div>
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3>ENLACES</h3>
+        <ul>
+          <li><a href="#">Contáctanos</a></li>
+          <li><a href="#">Regístrate</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>SÍGUENOS</h3>
+        <ul>
+            <li><a href="https://www.facebook.com/p/Venta-de-Medicamentos-Ary-Ke-100051160614467/"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
+            <li><a href=" "><i class="fa-brands fa-twitter"></i> Twitter</a></li>
+            <li><a href="https://juano8a.wixsite.com/website"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>ATENCIÓN AL CLIENTE</h3>
+        <ul>
+          <li>Ubicación de Farmacias</li>
+          <li>Contáctanos a: <a href="mailto:sc@puntofarm.com">sc@puntofarm.com</a></li>
+          <li>Línea de atención: 2200-8800</li>
+        </ul>
+      </div>
+
+    
+      <div class="footer-column certification">
+        <h3>NUESTRA CERTIFICACIÓN</h3>
+        <img src="../img/certi.png" alt="LegiScript Certified">
+      </div>
+    
+      <div class="footer-column">
+        <h3>ACEPTAMOS</h3>
+        <div class="payment-logos">
+          <img src="../img/bac.png" alt="BAC">
+          <img src="../img/VISA.png" alt="Visa">
+          <img src="../img/master.png" alt="Mastercard">
+          <img src="../img/banpis.png" alt="BanPais">
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <ul>
+        <li><a href="#">Mapa del Sitio</a></li>
+        <li><a href="#">Términos y Condiciones</a></li>
+        <li><a href="#">Política de protección de datos personales</a></li>
+      </ul>
+      <p>© 2025 - 2026 Universidad de San Pedro Sula</p>
+    </div>
+
+   
+   
+    <a href="https://maps.app.goo.gl/XPZ77MYXTXBKUeVy9?g_st=iw" class="whatsapp-button" target="_blank">
+      <i class="fa-solid fa-location-pin"></i>
+    </a>
+  </footer>
+
+  <script>
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const mobileNav = document.querySelector('.mobile-nav');
+  
+    mobileMenuBtn.addEventListener('click', () => {
+      if (mobileNav.style.display === 'block') {
+        mobileNav.style.display = 'none';
+      } else {
+        mobileNav.style.display = 'block';
+      }
+    });
+  
+    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+    dropdownToggles.forEach(toggle => {
+      toggle.addEventListener('click', (e) => {
+        e.preventDefault(); 
+        e.stopPropagation();
+  
+        const parentLi = toggle.closest('.has-dropdown');
+        parentLi.classList.toggle('open');
+      });
+    });
+  
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.has-dropdown') && !e.target.closest('.mobile-menu-btn')) {
+        document.querySelectorAll('.has-dropdown.open').forEach(openLi => {
+          openLi.classList.remove('open');
+        });
+      }
+    });
+  </script>
+
+<script>
+ 
+  const desktopDropdowns = document.querySelectorAll('.nav-bar .has-dropdown');
+
+  desktopDropdowns.forEach(dropdown => {
+    const link = dropdown.querySelector('a');
+
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      document.querySelectorAll('.nav-bar .has-dropdown.open').forEach(openItem => {
+        if (openItem !== dropdown) {
+          openItem.classList.remove('open');
+        }
+      });
+      dropdown.classList.toggle('open');
+    });
+  });
+
+ 
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.nav-bar .has-dropdown')) {
+      document.querySelectorAll('.nav-bar .has-dropdown.open').forEach(openItem => {
+        openItem.classList.remove('open');
+      });
+    }
+  });
+</script>
+
+<script>
+  function updateCartCount() {
+    let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    const totalCount = cartItems.reduce((acc, item) => acc + item.quantity, 0);
+    const cartCountEl = document.getElementById('cart-count');
+    if (cartCountEl) {
+      cartCountEl.textContent = totalCount;
+    }
+  }
+  updateCartCount();
+  
+  let currentProduct = {};
+  document.querySelectorAll('.product-item .card img').forEach(img => {
+    img.addEventListener('click', function() {
+      const card = this.closest('.card');
+      const id = card.getAttribute('data-id');
+      const name = card.getAttribute('data-name');
+      const price = parseFloat(card.getAttribute('data-price'));
+      const description = card.getAttribute('data-description') || '';
+      const imgSrc = card.getAttribute('data-img') || this.getAttribute('src');
+      
+    
+      currentProduct = { id, name, price, description, image: imgSrc };
+      
+      document.getElementById('dynamicModalLabel').textContent = name;
+      document.getElementById('modalImage').src = imgSrc;
+      document.getElementById('modalDescription').textContent = description;
+      document.getElementById('modalPrecio').textContent = 'L. ' + price.toFixed(2);
+      document.getElementById('modalCantidad').value = 1;
+      
+      const modal = new bootstrap.Modal(document.getElementById('dynamicModal'));
+      modal.show();
+    });
+  });
+  
+  document.getElementById('btnAgregarCarrito').addEventListener('click', function() {
+    const quantity = parseInt(document.getElementById('modalCantidad').value) || 1;
+    const productToAdd = { ...currentProduct, quantity };
+    
+    let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    
+    const existingIndex = cartItems.findIndex(item => item.id === productToAdd.id);
+    if (existingIndex !== -1) {
+      cartItems[existingIndex].quantity += quantity;
+    } else {
+      cartItems.push(productToAdd);
+    }
+    
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    alert("Producto agregado al carrito");
+    updateCartCount();
+    
+ 
+    const modalElement = document.getElementById('dynamicModal');
+    const modalInstance = bootstrap.Modal.getInstance(modalElement);
+    modalInstance.hide();
+  });
+</script>
+ 
+  <script src="script.js"></script>
+
+</body>
+</html>

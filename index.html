@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Farmacia</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+
+</head>
+<body>
+  
+  <header>
+    <!-- Barra superior -->
+    <div class="top-bar">
+      <div class="left-info">
+        <span class="green-text">SALA DE VENTAS</span>
+        <span class="blue-text">FARMACIA</span>
+        <span class="separator">|</span>
+        <i class="fas fa-phone"></i>
+        <span class="phones">+503 2247-8888 | +503 6785-6432</span>
+      </div>
+      <div class="right-info">
+        <ul>
+          <li><a href="#">Rastrear paquete</a></li>
+          <img src="rastreo.png" alt="Logo Izquierdo" class="side-image">
+          <li><a href="#">Aplica a Tarjeta</a></li>
+          <img src="tarjeta-de-credito.png" alt="Logo Izquierdo" class="side-image">
+          <li><a href="#">Registro</a></li>
+          <img src="tarjeta-de-credito.png" alt="Logo Izquierdo" class="side-image">
+          <li><a href="">Iniciar sesión</a></li>
+          <img src="perfil-del-usuario.png" alt="Logo Izquierdo" class="side-image">
+        </ul>
+      </div>
+    </div>
+  
+    <!-- Barra principal (logo, cuenta, carrito, buscador) -->
+    <div class="main-bar">
+      <!-- LOGO -->
+      <div class="logo">
+        <img src="img/logo.png" alt="Logo Farmacia">
+      </div>
+  
+      <!-- Seccion con Mi cuenta y Carrito -->
+      <div class="account-cart">
+
+        <div class="account-dropdown has-dropdown">
+          <a href="#" class="account-link" id="miCuenta">
+            <i class="fa fa-user"></i> Mi cuenta
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="#" id="loginBtn">Iniciar Sesión</a></li>
+            <li><a href="Registro.html">Crear cuenta</a></li>
+          </ul>
+        </div>
+        
+        <!-- Ícono del carrito -->
+        <div class="cart-icon">
+          <a href="./SubMenus/carrito.html">
+            <i class="fa fa-shopping-cart"></i>
+            <span id="cart-count"></span>
+          </a>
+        </div>
+      </div>
+  
+      <!-- Contenedor del buscador -->
+      <div class="search-container">
+        <div class="search-select-container">
+          <button class="search-dropdown-btn">
+            Buscar en <i class="fas fa-caret-down"></i>
+          </button>
+        </div>
+        <!--* Campo de texto para la búsqueda* -->
+        <input 
+          type="text" 
+          class="search-input" 
+          placeholder="¿Qué producto está buscando?"
+        />
+        
+        <!-- Botón de búsqueda -->
+        <button class="search-button">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+    </div>
+  
+
+    <div class="purchase-options">
+      <span>¿Cómo deseas comprar?</span>
+      <label>
+        <input type="radio" name="tipo-compra" value="domicilio" checked> 
+        A Domicilio
+      </label>
+      <label>
+        <input type="radio" name="tipo-compra" value="extranjero"> 
+        Envío al Extranjero
+      </label>
+      <label>
+        <input type="radio" name="tipo-compra" value="sucursal"> 
+        Recoger en Sucursal
+      </label>
+    </div>
+
+    
+ <!-- Barra de navegación -->
+    <nav class="nav-bar">
+      <ul>
+        <li class="has-dropdown">
+            <a href="SubMenus/Bebe.html">Categorías</a>
+            <ul class="dropdown">
+              <li><a href="SubMenus/Bebe.html">Bebé</a></li>
+              <li><a href="SubMenus/Diabetes.html">Hidratacion</a></li>
+              <li><a href="SubMenus/Cuidado.html">Cuidado Personal</a></li>
+            </ul>
+          </li>
+  
+          <li class="has-dropdown">
+            <a href="">Servicios</a>
+            <ul class="dropdown">
+              <li><a href="./SubMenus/Servicios.html">Consultorio Medico</a></li>
+            </ul>
+          </li>
+  
+          <li class="has-dropdown">
+            <a href="./SubMenus/Sucursal.html">Sucursales</a>
+            <ul class="dropdown">
+              <li><a href="./SubMenus/Sucursal.html">Sucursal</a></li>
+            </ul>
+          </li>
+  
+          <li class="has-dropdown">
+            <a href="./SubMenus/Beneficios.html">Beneficios</a>
+            <ul class="dropdown">
+              <li><a href="./SubMenus/Beneficios.html">Mas</a></li>
+            </ul>
+          </li>
+      </ul>
+    </nav>
+  
+
+    <!-- Barra de navegación -->
+    <div class="mobile-menu-btn">
+      <i class="fa fa-bars"></i>
+    </div>
+    <nav class="mobile-nav">
+      <ul>
+        <li class="has-dropdown">
+          <a href="#" class="dropdown-toggle">Categorías</a>
+            <ul class="dropdown">
+              <li><a href="SubMenus/Bebe.html">Bebé</a></li>
+              <li><a href="SubMenus/Diabetes.html">Hidratacion</a></li>
+              <li><a href="SubMenus/Cuidado.html">Cuidado Personal</a></li>
+            </ul>
+          </li>
+
+          <li class="has-dropdown">
+            <a href="./SubMenus/Servicios.html" class="dropdown-toggle">Servicios</a>
+            <ul class="dropdown">
+              <li><a href="Servicios.html">Consultorio Medico </a></li>
+            </ul>
+          </li>
+
+          <li class="has-dropdown">
+            <a href="./SubMenus/Sucursal.html" class="dropdown-toggle">Sucursales</a>
+            <ul class="dropdown">
+              <li><a href="./SubMenus/Sucursal.html">Sucursal</a></li>
+            </ul>
+          </li>
+    
+          <li class="has-dropdown">
+            <a href="./SubMenus/Beneficios.html" class="dropdown-toggle">Beneficios</a>
+            <ul class="dropdown">
+              <li><a href="./SubMenus/Beneficios.html">Mas</a></li>
+            </ul>
+          </li>
+      </ul>
+    </nav>
+  </header>
+ 
+  <!-- Contenido principal del sitio -->
+  <div class="slider-container">
+    <div class="slide active">
+      <img src="img/img.png" alt="Imagen 1">
+    </div>
+    <div class="slide">
+      <img src="img/img2.png" alt="Imagen 2">
+    </div>
+    <div class="slide">
+      <img src="img/img3.png" alt="Imagen 3">
+    </div>
+    <div class="slide">
+      <img src="img/img4.png" alt="Imagen 4">
+    </div>
+    <div class="slide">
+      <img src="img/img5.png" alt="Imagen 5">
+    </div>
+     <div class="slide">
+      <img src="img/img6.png" alt="Imagen 6">
+    </div>
+     <div class="slide">
+      <img src="img/img7.jpg" alt="Imagen 7">
+    </div>
+
+    <a class="prev">&#10094;</a>
+    <a class="next">&#10095;</a>
+
+    <div class="dots-container">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </div>
+
+  <section class="categories-section">
+   
+    <div class="categories-header">
+      <h2>Nuestras Categorías</h2>
+      <a href="#">Ver más</a>
+    </div>
+    <div class="categories-list">
+      <div class="category-item">
+        <div class="category-image">
+          <a href="./SubMenus/Bebe.html"> <img src="img/Almiron.jpg" alt="Bebé" /></a>
+         
+        </div>
+        <span>Bebé</span>
+      </div>
+      <div class="category-item">
+        <div class="category-image">
+          <a href="./SubMenus/Diabetes.html"> <img src="img/crema2.jpg" alt="Coleccionable Sombrilla" /></a>
+        </div>
+        <span>Crema</span>
+      </div>
+      <div class="category-item">
+        <div class="category-image">
+          <a href="./SubMenus/Diabetes.html"><img src="img/Comesticos.jpg" alt="Cosméticos" /></a>
+        </div>
+        <span>Cosméticos</span>
+      </div>
+      <div class="category-item">
+        <div class="category-image">
+          <a href="./SubMenus/Cuidado.html"> <img src="img/cuidado.jpg" alt="Cuidado Personal" /></a>
+        </div>
+        <span>Cuidado Personal</span>
+      </div>
+      <div class="category-item">
+        <div class="category-image">
+          <img src="img/deporte.jpg" alt="Deportivo" />
+        </div>
+        <span>Deportivo</span>
+      </div>
+      <div class="category-item">
+        <div class="category-image">
+          <img src="img/Medico.jpg" alt="Electrónicos" />
+        </div>
+        <span>Electrónicos</span>
+      </div>
+      <div class="category-item">
+        <div class="category-image">
+          <img src="img/equipo.jpg" alt="Equipo Médico" />
+        </div>
+        <span>Equipo Médico</span>
+      </div>
+      <div class="category-item">
+        <div class="category-image">
+          <img src="img/farmacia.jpg" alt="Farmacia" />
+        </div>
+        <span>Farmacia</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="discounts-section">
+   
+    <h2>Descuentos del mes</h2>
+    
+    
+    <div class="discounts-grid">
+      <div class="discount-card">
+        <div class="card-content">
+          <img src="./img/Aceite de bebe.jpg" alt="Fibber Plus 960 ml">
+          <div class="discount-percentage">
+            5% <span>Descuento</span>
+          </div>
+          <p class="product-name">Fibber Plus 960 ml</p>
+          <a href="./SubMenus/Diabetes.html" class="buy-button">COMPRA AQUÍ</a>
+        </div>
+      </div>
+
+      <div class="discount-card">
+        <div class="card-content">
+          <img src="./img/talco.jpg" alt="Centrum Women">
+          <div class="discount-percentage">
+            10% <span>Descuento</span>
+          </div>
+          <p class="product-name">Centrum for Women</p>
+          <a href="./SubMenus/Bebe.html" class="buy-button">COMPRA AQUÍ</a>
+        </div>
+      </div>
+  
+    
+      <div class="discount-card">
+        <div class="card-content">
+          <img src="./img2/producto1.jpg" alt="Fexofen 120 mg">
+          <div class="discount-percentage">
+            10% <span>Descuento</span>
+          </div>
+          <p class="product-name">Fexofen 120 mg</p>
+          <a href="./SubMenus/Bebe.html" class="buy-button">COMPRA AQUÍ</a>
+        </div>
+      </div>
+  
+     
+      <div class="discount-card">
+        <div class="card-content">
+          <img src="img/promo4.jpg" alt="Toro Vitamina">
+          <div class="discount-percentage">
+            44% <span>Descuento</span>
+          </div>
+          <p class="product-name">Toro Vitamina 500ml</p>
+          <a href="./SubMenus/Bebe.html" class="buy-button">COMPRA AQUÍ</a>
+        </div>
+      </div>
+  
+    
+      <div class="discount-card">
+        <div class="card-content">
+          <img src="img/promo5.jpg" alt="Centrum Men">
+          <div class="discount-percentage">
+            5% <span>Descuento</span>
+          </div>
+          <p class="product-name">Centrum for Men 30 tabs</p>
+          <a href="./SubMenus/Bebe.html" class="buy-button">COMPRA AQUÍ</a>
+        </div>
+      </div>
+  
+      
+      <div class="discount-card">
+        <div class="card-content">
+          <img src="img/promo6.png" alt="Filler">
+          <div class="discount-percentage">
+            15% <span>Descuento</span>
+          </div>
+          <p class="product-name">FillerX 20 ml</p>
+          <a href="./SubMenus/Diabetes.html" class="buy-button">COMPRA AQUÍ</a>
+        </div>
+      </div>
+  
+     
+      <div class="discount-card">
+        <div class="card-content">
+          <img src="img/promo6.jpg" alt="ACFOL">
+          <div class="discount-percentage">
+            5% <span>Descuento</span>
+          </div>
+          <p class="product-name">ACFOL 500 mg</p>
+          <a href="./SubMenus/Diabetes.html" class="buy-button">COMPRA AQUÍ</a>
+        </div>
+      </div>
+  
+      
+      <div class="discount-card more-products">
+        <div class="card-content">
+          <a href="./SubMenus/Diabetes.html" class="buy-button">HAZ CLIC AQUÍ<h3><br>PARA VER MÁS<br>PRODUCTOS</h3></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="featured-section">
+    <h2>Categorías Destacadas</h2>
+    <div class="featured-grid">
+    
+      <div class="featured-item" style="background-image: url('img/destacado1.png');">
+        <div class="overlay">
+          <h3>Dr Teal's</h3>
+          <button><a href="./MEDICA-HOGAR-CATALOGO-2024.pdf" download class="download-btn">¡Lo Quiero!</a></button>
+        </div>
+      </div>
+  
+      
+      <div class="featured-item" style="background-image: url('img/destacado2.png');">
+        <div class="overlay">
+          <h3>Cuidado Masculino</h3>
+          <button><a href="./SubMenus/Cuidado.html">¡Lo Quiero!</button></a>
+        </div>
+      </div>
+  
+     
+      <div class="featured-item" style="background-image: url('img/destacado3.png');">
+        <div class="overlay">
+          <h3>Cuidado Femenino</h3>
+          <button><a href="./SubMenus/Cuidado.html">¡Lo Quiero!</button></a>
+        </div>
+      </div>
+  
+     
+      <div class="featured-item" style="background-image: url('img/destacado4.png');">
+        <div class="overlay">
+          <h3>CeraVe</h3>
+          <button>¡Lo Quiero!</button>
+        </div>
+      </div>
+  
+   
+      <div class="featured-item" style="background-image: url('img/destacado5.png');">
+        <div class="overlay">
+          <h3>Protección Solar</h3>
+          <button>¡Lo Quiero!</button>
+        </div>
+      </div>
+  
+     
+      <div class="featured-item" style="background-image: url('img/destacado6.png');">
+        <div class="overlay">
+          <h3>Colgate</h3>
+          <button>¡Lo Quiero!</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="productos-recomendados container-general">
+    <h2>Productos recomendados</h2>
+    <div class="owl-carousel owl-theme">
+      <div class="product-card">
+        <a href="./SubMenus/Cuidado.html"><img src="img2/producto1.jpg" alt="Flemoxil (Ambroxol) Jarabe X 120 ML"></a>
+        <div class="product-title">Flemoxil (Ambroxol) Jarabe X 400 ML</div></a>
+      </div>
+  
+      <div class="product-card">
+        <a href="./SubMenus/Diabetes.html"><img src="img/aco.jpg" alt="DioTrav (Diosmina) 600MG X 30 Tabletas"></a>
+        <div class="product-title">DioTrav (Diosmina) 600MG X 30 Tabletas</div>
+      </div>
+  
+      <div class="product-card">
+        <a href="./SubMenus/Diabetes.html"><img src="img/ave.jpg" alt="Erantyum 25 MG/14 Amp Bebibles"></a>
+        <div class="product-title">Erantyum 25 MG/14 Amp Bebibles</div>
+      </div>
+  
+      <div class="product-card">
+        <a href="./SubMenus/Cuidado.html"><img src="img/laroche.png" alt="Agastop Sol Tópica X 120ML"></a>
+        <div class="product-title">Agastop Sol Tópica X 120ML</div>
+      </div>
+  
+      <div class="product-card">
+        <a href="./SubMenus/Cuidado.html"><img src="img/isdin.jpg" alt="Agastop Sol Tópica X 120ML"></a>
+        <div class="product-title">Agastop Sol Tópica X 120ML</div>
+      </div>
+    </div>
+  </section>
+
+ <script src="slider.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+ 
+  <!-- Pie de página (footer) -->
+  <footer>
+    <div class="footer-top-border"></div>
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3>ENLACES</h3>
+        <ul>
+          <li><a href="#">Contáctanos</a></li>
+          <li><a href="#">Regístrate</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>SÍGUENOS</h3>
+        <ul>
+          <li><a href="https://www.facebook.com/p/Venta-de-Medicamentos-Ary-Ke-100051160614467/"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
+          <li><a href=" "><i class="fa-brands fa-twitter"></i> Twitter</a></li>
+          <li><a href="https://juano8a.wixsite.com/website"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>ATENCIÓN AL CLIENTE</h3>
+        <ul>
+          <li>Ubicación de Farmacias</li>
+          <li>Contáctanos a: <a href="mailto:sc@puntofarm.com">sc@puntofarm.com</a></li>
+          <li>Línea de atención: 2200-8800</li>
+        </ul>
+      </div>
+
+    
+      <div class="footer-column certification">
+        <h3>NUESTRA CERTIFICACIÓN</h3>
+        <img src="img/certi.png" alt="LegiScript Certified">
+      </div>
+
+      <div class="footer-column">
+        <h3>ACEPTAMOS</h3>
+        <div class="payment-logos">
+          <img src="img/bac.png" alt="BAC">
+          <img src="img/VISA.png" alt="Visa">
+          <img src="img/master.png" alt="Mastercard">
+          <img src="img/banpis.png" alt="BanPais">
+        </div>
+      </div>
+    </div>
+
+
+    <div class="footer-bottom">
+      <ul>
+        <li><a href="#">Mapa del Sitio</a></li>
+        <li><a href="#">Términos y Condiciones</a></li>
+        <li><a href="#">Política de protección de datos personales</a></li>
+      </ul>
+      <p>© 2025 - 2026 Universidad de San Pedro Sula</p>
+    </div>
+
+   
+    <a href="https://maps.app.goo.gl/XPZ77MYXTXBKUeVy9?g_st=iw" class="whatsapp-button" target="_blank">
+      <i class="fa-solid fa-location-pin"></i>
+    </a>
+  </footer>
+
+  <div id="modalOverlay" class="modal-overlay">
+    <div class="modal-content">
+      <span id="closeModal" class="close">&times;</span>
+      <h2>Bienvenido</h2>
+      <form>
+        <div class="form-group">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" placeholder="ejemplo@mail.com" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Contraseña</label>
+          <input type="password" id="password" placeholder="Contraseña" required>
+        </div>
+        <button type="submit2" id="loginBtnSubmit">Entrar</button>
+      </form>
+    </div>
+  </div>
+
+
+  
+  <script>
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const mobileNav = document.querySelector('.mobile-nav');
+  
+    mobileMenuBtn.addEventListener('click', () => {
+      if (mobileNav.style.display === 'block') {
+        mobileNav.style.display = 'none';
+      } else {
+        mobileNav.style.display = 'block';
+      }
+    });
+  
+    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+    dropdownToggles.forEach(toggle => {
+      toggle.addEventListener('click', (e) => {
+        e.preventDefault(); // Evita salto
+        e.stopPropagation();
+  
+        const parentLi = toggle.closest('.has-dropdown');
+        parentLi.classList.toggle('open');
+      });
+    });
+  
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.has-dropdown') && !e.target.closest('.mobile-menu-btn')) {
+        document.querySelectorAll('.has-dropdown.open').forEach(openLi => {
+          openLi.classList.remove('open');
+        });
+      }
+    });
+  </script>
+
+<script>
+  // Seleccionamos todos los .has-dropdown dentro de .nav-bar (escritorio)
+  const desktopDropdowns = document.querySelectorAll('.nav-bar .has-dropdown');
+
+  desktopDropdowns.forEach(dropdown => {
+    // Obtenemos el enlace principal
+    const link = dropdown.querySelector('a');
+
+    // Al hacer clic en el enlace principal, evitamos el salto y alternamos la clase "open"
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+
+      // Cerramos cualquier otro submenú que esté abierto
+      document.querySelectorAll('.nav-bar .has-dropdown.open').forEach(openItem => {
+        if (openItem !== dropdown) {
+          openItem.classList.remove('open');
+        }
+      });
+
+      // Alternamos la clase .open en el li actual
+      dropdown.classList.toggle('open');
+    });
+  });
+
+  // Cerrar submenús al hacer clic fuera de .nav-bar
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.nav-bar .has-dropdown')) {
+      document.querySelectorAll('.nav-bar .has-dropdown.open').forEach(openItem => {
+        openItem.classList.remove('open');
+      });
+    }
+  });
+</script>
+
+<script>
+  // Función para actualizar el contador del carrito en el header
+  function updateCartCount() {
+    let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    const totalCount = cartItems.reduce((acc, item) => acc + item.quantity, 0);
+    const cartCountEl = document.getElementById('cart-count');
+    if (cartCountEl) {
+      cartCountEl.textContent = totalCount;
+    }
+  }
+  updateCartCount();
+  
+  // Variable global para almacenar el producto actual
+  let currentProduct = {};
+  
+  // Asignar listener a cada imagen de producto para abrir el modal dinámico
+  document.querySelectorAll('.product-item .card img').forEach(img => {
+    img.addEventListener('click', function() {
+      const card = this.closest('.card');
+      const id = card.getAttribute('data-id');
+      const name = card.getAttribute('data-name');
+      const price = parseFloat(card.getAttribute('data-price'));
+      const description = card.getAttribute('data-description') || '';
+      const imgSrc = card.getAttribute('data-img') || this.getAttribute('src');
+      
+      // Guardar datos del producto actual
+      currentProduct = { id, name, price, description, image: imgSrc };
+      
+      // Actualizar el contenido del modal
+      document.getElementById('dynamicModalLabel').textContent = name;
+      document.getElementById('modalImage').src = imgSrc;
+      document.getElementById('modalDescription').textContent = description;
+      document.getElementById('modalPrecio').textContent = 'L. ' + price.toFixed(2);
+      document.getElementById('modalCantidad').value = 1;
+      
+      // Mostrar el modal
+      const modal = new bootstrap.Modal(document.getElementById('dynamicModal'));
+      modal.show();
+    });
+  });
+  
+  // Listener para el botón "Agregar al carrito" en el modal
+  document.getElementById('btnAgregarCarrito').addEventListener('click', function() {
+    const quantity = parseInt(document.getElementById('modalCantidad').value) || 1;
+    const productToAdd = { ...currentProduct, quantity };
+    
+    // Recuperar el carrito o iniciarlo vacío (clave "cartItems")
+    let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    
+    // Verificar si el producto ya existe para actualizar la cantidad
+    const existingIndex = cartItems.findIndex(item => item.id === productToAdd.id);
+    if (existingIndex !== -1) {
+      cartItems[existingIndex].quantity += quantity;
+    } else {
+      cartItems.push(productToAdd);
+    }
+    
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    alert("Producto agregado al carrito");
+    updateCartCount();
+    
+    // Cerrar el modal
+    const modalElement = document.getElementById('dynamicModal');
+    const modalInstance = bootstrap.Modal.getInstance(modalElement);
+    modalInstance.hide();
+  });
+</script>
+  
+  <div id="chatbot-container">
+    <div id="chatbot-header">Asistente Virtual</div>
+    <div id="chatbot-messages"></div>
+    <div id="chatbot-input-container">
+      <input type="text" id="chatbot-input" placeholder="Escribe tu mensaje...">
+      <button id="chatbot-send">Enviar</button>
+    </div>
+  </div>
+
+  <button id="chatbot-toggle" aria-label="Abrir chat"><i class="fa-solid fa-comment-dots"></i></button>
+
+   
+  <script>
+     
+    const chatbotToggle = document.getElementById('chatbot-toggle');
+    const chatbotContainer = document.getElementById('chatbot-container');
+    const chatbotMessages = document.getElementById('chatbot-messages');
+    const chatbotInput = document.getElementById('chatbot-input');
+    const chatbotSend = document.getElementById('chatbot-send');
+  
+     
+    chatbotToggle.addEventListener('click', () => {
+      chatbotContainer.style.display = (chatbotContainer.style.display === 'flex') ? 'none' : 'flex';
+    });
+  
+    
+    function addMessage(text, sender = 'bot') {
+      const messageDiv = document.createElement('div');
+      messageDiv.classList.add('chatbot-message', sender);
+      messageDiv.textContent = text;
+      chatbotMessages.appendChild(messageDiv);
+      chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+    }
+   
+    function locateProduct(productQuery) {
+      let found = false;
+   
+      $('.product-item').each(function() {
+        let productName = $(this).find('.card').data('name') || $(this).find('.card-title').text();
+        if (productName.toLowerCase().includes(productQuery)) {
+        
+          $(this).addClass('highlight-product');
+          $('html, body').animate({ scrollTop: $(this).offset().top - 100 }, 800);
+          
+          setTimeout(() => {
+            $(this).removeClass('highlight-product');
+          }, 2000);
+          found = true;
+          return false;  
+        }
+      });
+      return found;
+    }
+    function getChatbotResponse(userMessage) {
+      const message = userMessage.toLowerCase();
+  
+      if (message.includes("ubicar") || message.includes("localiza") || message.includes("dónde está") || message.includes("mostrar")) {
+        
+        let productQuery = message.replace(/(ubicar|localiza|dónde está|mostrar|el|la|los|las)/g, "").trim();
+        if (locateProduct(productQuery)) {
+          return `He localizado el producto "${productQuery}" en nuestra sección, desplazándome hacia él.`;
+        } else {
+          return `No pude encontrar un producto que coincida con "${productQuery}".`;
+        }
+      }
+      if (message.includes("hola") || message.includes("buenos")) {
+        return "¡Hola! Soy tu asistente virtual. Puedes preguntarme por productos, precios, promociones o pedirme que ubique algún producto.";
+      }
+      if (message.includes("precio")) {
+        return "Nuestros precios varían según el producto. Por ejemplo, algunos de nuestros productos inician en L. 90. ¿Hay algo en particular que buscas?";
+      }
+      if (message.includes("producto") || message.includes("productos")) {
+        return "Contamos con una amplia variedad de productos, desde medicamentos hasta artículos de cuidado personal. ¿Te interesa algo en específico?";
+      }
+      if (message.includes("promoción") || message.includes("oferta")) {
+        return "Actualmente tenemos ofertas exclusivas en algunos productos de cuidado. ¿Quieres conocer más sobre alguna promoción en particular?";
+      }
+      if (message.includes("horario")) {
+        return "Nuestro horario de atención es de 8:00 AM a 8:00 PM de lunes a sábado y de 9:00 AM a 2:00 PM los domingos.";
+      }
+      if (message.includes("dónde") || message.includes("ubicación") || message.includes("dirección")) {
+        return "Estamos ubicados en el centro de la ciudad, en la avenida principal. ¿Necesitas indicaciones?";
+      }
+      return "Lo siento, aún estoy aprendiendo y no entiendo completamente la pregunta. ¿Podrías reformularla o ser más específico?";
+    }
+    function sendMessage() {
+      const userMessage = chatbotInput.value.trim();
+      if (!userMessage) return;
+      addMessage(userMessage, 'user');
+      chatbotInput.value = "";
+      setTimeout(() => {
+        const response = getChatbotResponse(userMessage);
+        addMessage(response, 'bot');
+      }, 500);
+    }
+  
+    chatbotSend.addEventListener('click', sendMessage);
+    chatbotInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') sendMessage();
+    });
+   
+    addMessage("¡Bienvenido a Farmacia Ary-Ke! Pregunta por nuestros productos, precios, promociones o pídeme que te ubique algún producto.", 'bot');
+  </script>
+  <script> 
+    const user = localStorage.getItem('username'); 
+    if (user) {
+      document.getElementById('account-name').textContent = user;
+    }
+  </script>
+  
+  <script>
+    //login
+    document.getElementById("loginBtnSubmit").addEventListener("click", function (e) {
+    e.preventDefault();
+
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    fetch("login.php", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/x-www-form-urlencoded"
+        },
+        body: `email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            localStorage.setItem("user_id", data.id);
+            localStorage.setItem("username", data.username);
+
+            // 🔽 Cambiar texto del menú "Mi cuenta"
+            document.getElementById("miCuenta").textContent = data.username;
+
+            alert("Bienvenido " + data.username);
+            // Aquí podrías cerrar el modal si lo deseas:
+            document.getElementById("modalOverlay").style.display = "none";
+        } else {
+            alert(data.message);
+        }
+    })
+    .catch(error => {
+        console.error("Error al iniciar sesión:", error);
+    });
+   });
+  </script>
+  
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const username = localStorage.getItem("username");
+      if (username) {
+        document.getElementById("miCuenta").textContent = username;
+      }
+    });
+  </script>
+  
+
+  <script src="script.js"></script>
+
+</body>
+</html>

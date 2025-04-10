@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="flex items-center justify-center min-h-screen bg-blue-100">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-2xl">
+        <h1 class="text-center text-2xl font-bold mb-6">Crea tu cuenta</h1>
+        <form action="registro.php" method="POST">
+            <div class="grid grid-cols-1 gap-3">
+                <div>
+                    <label for="email"  class="block mb-2">Correo:</label>
+                    <input type="email" id="email" class="w-full border border-gray-300 rounded px-3 py-2" placeholder="Correo electrónico" name="email" required>
+                </div>
+                <div>
+                    <label for="username" class="block mb-2">Nombre de usuario:</label>
+                    <input type="text" id="username" class="w-full border border-gray-300 rounded px-3 py-2" placeholder="Nombre" name="username" required>
+                </div>
+                <div>
+                    <label for="password" class="block mb-2">Contraseña:</label>
+                    <input type="password" id="password" class="w-full border border-gray-300 rounded px-3 py-2" placeholder="Contraseña" name="password" required>
+                </div>
+            </div>
+            <div class="mt-6">
+                <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded">Crear mi cuenta</button>
+            </div>
+        </form>
+        <script>
+            function redirectToIndex() {
+                setTimeout(() => { window.location.href = 'index.html'; }, 1000);
+                return true;
+            }
+        </script>
+    </div>
+</body>
+</html>

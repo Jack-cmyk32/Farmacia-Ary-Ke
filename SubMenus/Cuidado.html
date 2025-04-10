@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ciudado Personal</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+  <link rel="stylesheet" href="cuidado.css" />
+  <link rel="stylesheet" href="Bebe.css"/>
+
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <div class="left-info">
+        <span class="green-text">SALA DE VENTAS</span>
+        <span class="blue-text">FARMACIA</span>
+        <span class="separator">|</span>
+        <i class="fas fa-phone"></i>
+        <span class="phones">+503 2247-8888 | +503 6785-6432</span>
+      </div>
+      <div class="right-info">
+        <ul>
+          <li><a href="#">Rastrear paquete</a></li>
+          <img src="../rastreo.png" alt="Logo Izquierdo" class="side-image">
+          <li><a href="#">Aplica a Tarjeta</a></li>
+          <img src="../tarjeta-de-credito.png" alt="Logo Izquierdo" class="side-image">
+          <li><a href="#">Registro</a></li>
+          <img src="../tarjeta-de-credito.png" alt="Logo Izquierdo" class="side-image">
+          <li><a href="">Iniciar sesión</a></li>
+          <img src="../perfil-del-usuario.png" alt="Logo Izquierdo" class="side-image">
+        </ul>
+      </div>
+    </div>
+
+   <div class="main-bar">
+    <div class="logo">
+      <a href="../index.html"><img src="../img/logo.png" alt="Logo Farmacia"></a>
+    </div>
+
+    <div class="account-cart">
+
+      <div class="cart-icon">
+        <a href="carrito.html">
+          <i class="fa fa-shopping-cart"></i>
+          <span id="cart-count"></span>
+        </a>
+      </div>
+    </div>
+  
+    <div class="search-container">
+      <div class="search-select-container">
+        <button class="search-dropdown-btn">
+          Buscar en <i class="fas fa-caret-down"></i>
+        </button>
+      </div>
+      <input 
+        type="text" 
+        class="search-input" 
+        placeholder="¿Qué producto está buscando?"
+      />
+      <button class="search-button">
+        <i class="fas fa-search"></i>
+      </button>
+    </div>
+  </div>
+
+
+  <div class="purchase-options">
+    <span>¿Cómo deseas comprar?</span>
+    <label>
+      <input type="radio" name="tipo-compra" value="domicilio" checked> 
+      A Domicilio
+    </label>
+    <label>
+      <input type="radio" name="tipo-compra" value="extranjero"> 
+      Envío al Extranjero
+    </label>
+    <label>
+      <input type="radio" name="tipo-compra" value="sucursal"> 
+      Recoger en Sucursal
+    </label>
+  </div>
+
+<nav class="nav-bar">
+  <ul>
+    <li class="has-dropdown">
+        <a href="../index.html">Categorías</a>
+        <ul class="dropdown">
+          <li><a href="Bebe.html">Bebé</a></li>
+          <li><a href="Diabetes.html">Hidratacion</a></li>
+          <li><a href="Cuidado.html">Cuidado Personal</a></li>
+        </ul>
+      </li>
+
+     <li class="has-dropdown">
+        <a href="../index.html">Servicio</a>
+        <ul class="dropdown">
+          <li><a href="Servicios.html">Cuidado Personal</a></li>
+        </ul>
+      </li>
+
+      <li class="has-dropdown">
+        <a href="#">Sucursales</a>
+        <ul class="dropdown">
+          <li><a href="">Sucursal</a></li>
+        </ul>
+      </li>
+  
+      <li class="has-dropdown">
+        <a href="#">Beneficios</a>
+        <ul class="dropdown">
+          <li><a href="Beneficios.html">Mas</a></li>
+        </ul>
+      </li>
+      
+  </ul>
+</nav>
+
+
+  <!-- Barra de navegación -->
+  <div class="mobile-menu-btn">
+    <i class="fa fa-bars"></i>
+  </div>
+  <nav class="mobile-nav">
+    <ul>
+      <li class="has-dropdown">
+        <a href="../index.html" class="dropdown-toggle">Categorías</a>
+          <ul class="dropdown">
+            <li><a href="SubMenus/Bebe.html">Bebé</a></li>
+            <li><a href="SubMenus/Diabetes.html">Hidratacion</a></li>
+            <li><a href="SubMenus/Cuidado.html">Cuidado Personal</a></li>
+          </ul>
+        </li>
+
+        <li class="has-dropdown">
+          <a href="#" class="dropdown-toggle">Servicios</a>
+          <ul class="dropdown">
+            <li><a href="#">Consultorio Medico </a></li>
+          </ul>
+        </li>
+
+        <li class="has-dropdown">
+          <a href="#" class="dropdown-toggle">Sucursales</a>
+          <ul class="dropdown">
+            <li><a href="../SubMenus/Servicios.html">Sucursal</a></li>
+          </ul>
+        </li>
+  
+        <li class="has-dropdown">
+          <a href="#" class="dropdown-toggle">Beneficios</a>
+          <ul class="dropdown">
+            <li><a href="Beneficios.html">Mas</a></li>
+          </ul>
+        </li>
+    </ul>
+  </nav>
+</header>
+  
+<div class="container mt-4">
+  <h3 class="text-center mb-4">Productos el Ciudado Personal</h3>
+  <div class="row">
+
+    <div class="col-md-3 product-item">
+      <div class="card" 
+           data-id="33" 
+           data-name="Farmacia Ferrer" 
+           data-price="220.50" 
+           data-description="Diseñada para todo tipo de piel, esta fórmula limpia a fondo pero con ternura. Elimina impurezas, maquillaje y exceso de grasa sin alterar el equilibrio natural de la piel. Deja el rostro limpio, hidratado y listo para recibir lo que venga después en tu rutina." 
+           data-img="../img3/producto1.png">
+        <img src="../img3/producto1.png" class="card-img-center" alt="Farmacia Ferrer" style="cursor: pointer;">
+        <div class="card-body text-center">
+          <h6 class="card-title">Farmacia Ferrer</h6>
+          <p class="card-text">L. 220.50</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 product-item">
+      <div class="card" 
+           data-id="34" 
+           data-name="SATO Detergente Líquido" 
+           data-price="170.20" 
+           data-description="Un limpiador suave, clínico y confiable para cuando tu piel pide calma y cero complicaciones. Ideal para pieles sensibles, irritadas o con condiciones dermatológicas específicas, este detergente líquido es conocido por su eficacia sin agredir la barrera cutánea." 
+           data-img="../img3/producto2.jpg">
+        <img src="../img3/producto2.jpg" class="card-img-center" alt="SATO Detergente Líquido" style="cursor: pointer;">
+        <div class="card-body text-center">
+          <h6 class="card-title">SATO Detergente Líquido</h6>
+          <p class="card-text">L. 170.20</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 product-item">
+      <div class="card" 
+           data-id="35" 
+           data-name="ISDIN Teen Skin Acniben Limpiador Purificante" 
+           data-price="220.50" 
+           data-description="Un básico para la piel joven (y rebelde). Esta espuma facial ligera elimina el exceso de grasa, limpia los poros y ayuda a prevenir imperfecciones sin resecar ni agredir. Ideal para quienes están en esa etapa de “¡hola acné, adiós autoestima!”... pero con solución en mano." 
+           data-img="../img3/producto3.jpg">
+        <img src="../img3/producto3.jpg" class="card-img-center" alt="ISDIN Teen Skin Acniben Limpiador Purificante" style="cursor: pointer;">
+        <div class="card-body text-center">
+          <h6 class="card-title">ISDIN Teen Skin Acniben Limpiador Purificante</h6>
+          <p class="card-text">L. 220.50</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-md-3 product-item">
+      <div class="card" 
+           data-id="36" 
+           data-name=" ISDIN Teen Skin Acniben Limpiador Purificante" 
+           data-price="120.10" 
+           data-description="Este limpiador en espuma no solo es para teen skin, también es para cualquier piel con tendencia a los granitos y exceso de grasa. Su fórmula espumosa es suave pero eficaz, ideal para usar mañana y noche sin dejar la piel tirante o reseca." 
+           data-img="../img3/producto4.png">
+        <img src="../img3/producto4.png" class="card-img-center" alt=" ISDIN Teen Skin Acniben Limpiador Purificante" style="cursor: pointer;">
+        <div class="card-body text-center">
+          <h6 class="card-title"> ISDIN Teen Skin Acniben Limpiador Purificante</h6>
+          <p class="card-text">L. 120.10</p>
+        </div>
+      </div>
+    </div>
+
+        <p></p>
+    <div class="col-md-3 product-item">
+      <div class="card" 
+           data-id="37" 
+           data-name=" La Roche-Posay Toleriane Dermo-Nettoyant" 
+           data-price="160.80" 
+           data-description="El limpiador que no irrita, no reseca y no falla. Especialmente formulado para pieles ultrasensibles, intolerantes o reactivas, este fluido limpiador y desmaquillante es pura suavidad embotellada." 
+           data-img="../img3/producto5.png">
+        <img src="../img3/producto5.png" class="card-img-center" alt=" La Roche-Posay Toleriane Dermo-Nettoyant" style="cursor: pointer;">
+        <div class="card-body text-center">
+          <h6 class="card-title"> La Roche-Posay Toleriane Dermo-Nettoyant</h6>
+          <p class="card-text">L. 160.80</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 product-item">
+      <div class="card" 
+           data-id="38" 
+           data-name="La Roche-Posay Eau Thermale " 
+           data-price="190.00" 
+           data-description="No es solo agua. Es agua con doctorado en dermatología.
+           Directamente desde los manantiales franceses, esta bruma es un must para pieles sensibles, irritadas o simplemente necesitadas de una pausa zen." 
+           data-img="../img3/producto6.jpg">
+        <img src="../img3/producto6.jpg" class="card-img-center" alt="La Roche-Posay Eau Thermale " style="cursor: pointer;">
+        <div class="card-body text-center">
+          <h6 class="card-title">La Roche-Posay Eau Thermale </h6>
+          <p class="card-text">L. 190.00</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 product-item">
+      <div class="card" 
+           data-id="39" 
+           data-name="Lierac Premium La Crème Regard" 
+           data-price="180.20" 
+           data-description="Un tratamiento para el contorno de ojos que no solo suena elegante... lo es. Esta joya de Lierac combate arrugas, ojeras, bolsas y falta de firmeza con una fórmula inspirada en la medicina regenerativa." 
+           data-img="../img3/producto7.png">
+        <img src="../img3/producto7.png" class="card-img-center" alt="Lierac Premium La Crème Regard" style="cursor: pointer;">
+        <div class="card-body text-center">
+          <h6 class="card-title">Lierac Premium La Crème Regard</h6>
+          <p class="card-text">L. 180.20</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 product-item">
+      <div class="card" 
+           data-id="40" 
+           data-name=" Bioderma Sensibio H2O" 
+           data-price="190.20" 
+           data-description="Con un 95% de ingredientes de origen natural, esta agua perfumada es perfecta para refrescar y mimar la piel del bebé sin agredirla. Su delicada fragancia, ideal para el día a día, deja una sensación limpia, ligera y… ¡adorable!" 
+           data-img="../img3/producto8.jpg">
+        <img src="../img3/producto8.jpg" class="card-img-center" alt=" Bioderma Sensibio H2O" style="cursor: pointer;">
+        <div class="card-body text-center">
+          <h6 class="card-title"> Bioderma Sensibio H2O</h6>
+          <p class="card-text">L. 190.20</p>
+        </div>
+      </div>
+    </div>
+
+    <p></p>
+    <div class="col-md-3 product-item">
+      <div class="card" 
+           data-id="41" 
+           data-name="Vichy Pureté Thermale" 
+           data-price="240.10" 
+           data-description="Formulado con agua termal mineralizante de Vichy y enriquecido con ingredientes calmantes, este tónico perfeccionador elimina los restos de impurezas y maquillaje, refresca la piel y afina la textura, dejándola lista para recibir tu hidratante como una esponja bien entrenada." 
+           data-img="../img3/producto9.jpg">
+        <img src="../img3/producto9.jpg" class="card-img-center" alt="Vichy Pureté Thermale" style="cursor: pointer;">
+        <div class="card-body text-center">
+          <h6 class="card-title">Vichy Pureté Thermale</h6>
+          <p class="card-text">L. 240.10</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 product-item">
+      <div class="card" 
+           data-id="42" 
+           data-name="Caudalie Vinoclean – Instant Foaming Cleanser" 
+           data-price="185.10" 
+           data-description="Ligera como el aire, efectiva como un detox. Esta espuma limpiadora de uva hidratante y salvia purificante convierte tu rutina facial en un paseo por el viñedo francés… pero en versión burbujas." 
+           data-img="../img3/producto10.jpg">
+        <img src="../img3/producto10.jpg" class="card-img-center" alt="Caudalie Vinoclean – Instant Foaming Cleanser" style="cursor: pointer;">
+        <div class="card-body text-center">
+          <h6 class="card-title">Caudalie Vinoclean – Instant Foaming Cleanser</h6>
+          <p class="card-text">L. 185.10</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 product-item">
+      <div class="card" 
+           data-id="43" 
+           data-name=" CeraVe Gel Control Imperfecciones (con AHA & BHA)" 
+           data-price="160.10" 
+           data-description="Un gel que va directo al grano… literal. Ideal para combatir brotes, puntos negros y textura irregular, este tratamiento combina ácido salicílico (BHA) y ácidos glicólico/láctico (AHA) para exfoliar, destapar poros y suavizar la piel." 
+           data-img="../img3/producto11.png">
+        <img src="../img3/producto11.png" class="card-img-center" alt=" CeraVe Gel Control Imperfecciones (con AHA & BHA)" style="cursor: pointer;">
+        <div class="card-body text-center">
+          <h6 class="card-title"> CeraVe Gel Control Imperfecciones (con AHA & BHA)</h6>
+          <p class="card-text">L. 160.10</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 product-item">
+      <div class="card" 
+           data-id="44" 
+           data-name="CeraVe Hydrating Foaming Oil Cleanser" 
+           data-price="170.00" 
+           data-description="Este limpiador está diseñado para piel normal a muy seca, incluyendo piel sensible y con tendencia atópica. Combina la suavidad de un aceite con el placer sensorial de una espuma, dejando la piel limpia, hidratada y cómoda." 
+           data-img="../img3/producto12.jpg">
+        <img src="../img3/producto12.jpg" class="card-img-center" alt=" CeraVe Hydrating Foaming Oil Cleanser" style="cursor: pointer;">
+        <div class="card-body text-center">
+          <h6 class="card-title">CeraVe Hydrating Foaming Oil Cleanser</h6>
+          <p class="card-text">L. 170.00</p>
+        </div>
+      </div>
+    </div>
+
+    <p></p>
+    <div class="col-md-3 product-item">
+      <div class="card" 
+           data-id="45" 
+           data-name="Bioderma Sensibio DS+ Gel Nettoyant" 
+           data-price="180.00" 
+           data-description="Especialmente formulada para proteger la delicada piel del bebé, esta crema crea una barrera que previene y alivia la irritación causada por el pañal. Con propiedades calmantes y una textura suave, es ideal para usar en cada cambio y mantener la piel sana y feliz." 
+           data-img="../img3/producto13.jpg">
+        <img src="../img3/producto13.jpg" class="card-img-center" alt="Bioderma Sensibio DS+ Gel Nettoyant" style="cursor: pointer;">
+        <div class="card-body text-center">
+          <h6 class="card-title">Bioderma Sensibio DS+ Gel Nettoyant</h6>
+          <p class="card-text">L. 180.00</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 product-item">
+      <div class="card" 
+           data-id="46" 
+           data-name=" MartiDerm Platinum Expression Gel" 
+           data-price="270.00" 
+           data-description="El aliado antiedad que no solo trata... ¡previene líneas de expresión! Este gel está diseñado para suavizar las arruguitas dinámicas (esas que aparecen al sonreír, fruncir o decir “no me hables sin café”)" 
+           data-img="../img3/producto14.jpg">
+        <img src="../img3/producto14.jpg" class="card-img-center" alt=" MartiDerm Platinum Expression Gel" style="cursor: pointer;">
+        <div class="card-body text-center">
+          <h6 class="card-title"> MartiDerm Platinum Expression Gel</h6>
+          <p class="card-text">L. 270.00</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 product-item">
+      <div class="card" 
+           data-id="47" 
+           data-name="NUXE Aquabella Beauty-Revealing Essence-Lotion" 
+           data-price="170.00" 
+           data-description="La esencia que despierta tu piel como un buen café en lunes. Esta loción-esencia está pensada para pieles mixtas, ayudando a hidratar, alisar la textura y afinar los poros... todo sin saturar." 
+           data-img="../img3/producto15.png">
+        <img src="../img3/producto15.png" class="card-img-center" alt="NUXE Aquabella Beauty-Revealing Essence-Lotion" style="cursor: pointer;">
+        <div class="card-body text-center">
+          <h6 class="card-title">NUXE Aquabella Beauty-Revealing Essence-Lotion</h6>
+          <p class="card-text">L. 170.00</p>
+        </div>
+      </div>
+    </div>
+      
+    <div class="col-md-3 product-item">
+      <div class="card" 
+           data-id="48" 
+           data-name=" Vichy Pureté Thermale 3 en 1 – One Step Cleanser para Piel Sensible" 
+           data-price="250.00" 
+           data-description="Un producto, tres funciones y cero complicaciones. Este limpiador todo en uno es leche limpiadora + tónico + desmaquillante de ojos en un solo gesto. Perfecto para quienes quieren cuidar su piel sin llenar el baño de botellitas." 
+           data-img="../img3/producto16.jpg">
+        <img src="../img3/producto16.jpg" class="card-img-center" alt=" Vichy Pureté Thermale 3 en 1 – One Step Cleanser para Piel Sensible" style="cursor: pointer;">
+        <div class="card-body text-center">
+          <h6 class="card-title"> Vichy Pureté Thermale 3 en 1 – One Step Cleanser para Piel Sensible</h6>
+          <p class="card-text">L. 250.00</p>
+        </div>
+      </div>
+    </div>
+      
+    </div>
+</div>
+
+<div class="modal fade" id="dynamicModal" tabindex="-1" aria-labelledby="dynamicModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="dynamicModalLabel"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+        <div class="modal-body d-flex flex-wrap">
+        <div class="col-md-6 text-center">
+          <img id="modalImage" src="" alt="" style="max-width: 100%;">
+        </div>
+        <div class="col-md-6">
+          <p id="modalDescription"></p>
+          <p id="modalPrecio"></p>
+          <label for="modalCantidad">Cantidad:</label>
+          <input type="number" id="modalCantidad" value="1" min="1" class="form-control" style="width:100px;margin-bottom:10px;">
+          <button class="btn btn-primary" id="btnAgregarCarrito">Agregar al carrito</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<p></p>
+
+<footer>
+<div class="footer-top-border"></div>
+<div class="footer-content">
+  <div class="footer-column">
+    <h3>ENLACES</h3>
+    <ul>
+      <li><a href="#">Contáctanos</a></li>
+      <li><a href="#">Regístrate</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-column">
+    <h3>SÍGUENOS</h3>
+    <ul>
+      <li><a href="#"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
+      <li><a href="#"><i class="fa-brands fa-twitter"></i> Twitter</a></li>
+      <li><a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-column">
+    <h3>ATENCIÓN AL CLIENTE</h3>
+    <ul>
+      <li>Ubicación de Farmacias</li>
+      <li>Contáctanos a: <a href="mailto:sc@puntofarm.com">sc@puntofarm.com</a></li>
+      <li>Línea de atención: 2200-8800</li>
+    </ul>
+  </div>
+
+
+  <div class="footer-column certification">
+    <h3>NUESTRA CERTIFICACIÓN</h3>
+    <img src="../img/certi.png" alt="LegiScript Certified">
+  </div>
+
+  <div class="footer-column">
+    <h3>ACEPTAMOS</h3>
+    <div class="payment-logos">
+      <img src="../img/bac.png" alt="BAC">
+      <img src="../img/VISA.png" alt="Visa">
+      <img src="../img/master.png" alt="Mastercard">
+      <img src="../img/banpis.png" alt="BanPais">
+    </div>
+  </div>
+</div>
+
+<div class="footer-bottom">
+  <ul>
+    <li><a href="#">Mapa del Sitio</a></li>
+    <li><a href="#">Términos y Condiciones</a></li>
+    <li><a href="#">Política de protección de datos personales</a></li>
+  </ul>
+  <p>© 2025 - 2026 Universidad de San Pedro Sula</p>
+</div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  $(document).ready(function() {
+
+      function filtrarProductos() {
+          var terminoBusqueda = $('.search-input').val().toLowerCase().trim();
+          $('.product-item').each(function() {
+              var nombreProducto = $(this).find('.card').data('name') || $(this).find('.card-title').text();
+              if (nombreProducto) {
+                  nombreProducto = nombreProducto.toLowerCase();
+                  $(this).toggle(nombreProducto.indexOf(terminoBusqueda) > -1);
+              }
+          });
+      }
+
+      $('.search-button').on('click', filtrarProductos);
+      $('.search-input').on('input', filtrarProductos);
+  
+  });
+  </script>
+
+
+<script>  
+  function updateCartCount() {
+    let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    const totalCount = cartItems.reduce((acc, item) => acc + item.quantity, 0);
+    const cartCountEl = document.getElementById('cart-count');
+    if (cartCountEl) {
+      cartCountEl.textContent = totalCount;
+    }
+  }
+
+  updateCartCount();
+
+  let currentProduct = {};
+
+  document.querySelectorAll('.product-item .card img').forEach(img => {
+    img.addEventListener('click', function() {
+      const card = this.closest('.card');
+      const id = card.getAttribute('data-id');
+      const name = card.getAttribute('data-name');
+      const price = parseFloat(card.getAttribute('data-price'));
+      const description = card.getAttribute('data-description') || '';
+      const imgSrc = card.getAttribute('data-img') || this.getAttribute('src');
+
+      currentProduct = { id, name, price, description, image: imgSrc };
+
+      document.getElementById('dynamicModalLabel').textContent = name;
+      document.getElementById('modalImage').src = imgSrc;
+      document.getElementById('modalDescription').textContent = description;
+      document.getElementById('modalPrecio').textContent = 'L. ' + price.toFixed(2);
+      document.getElementById('modalCantidad').value = 1;
+
+      const modal = new bootstrap.Modal(document.getElementById('dynamicModal'));
+      modal.show();
+    });
+  });
+
+  document.getElementById('btnAgregarCarrito').addEventListener('click', function() {
+    const quantity = parseInt(document.getElementById('modalCantidad').value) || 1;
+    const productToAdd = { ...currentProduct, quantity };
+
+    let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    const existingIndex = cartItems.findIndex(item => item.id === productToAdd.id);
+
+    if (existingIndex !== -1) {
+        cartItems[existingIndex].quantity += quantity;
+    } else {
+        cartItems.push(productToAdd);
+    }
+
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    updateCartCount();
+
+    // Obtener id del usuario desde localStorage
+    const userId = localStorage.getItem('user_id');
+    if (!userId) {
+      alert("Error: no se encontró el ID del usuario.");
+      return;
+    }
+
+    // Guardar producto y carrito en la base de datos
+    const data = new FormData();
+    data.append('nombre', currentProduct.name);
+    data.append('precio', currentProduct.price);
+    data.append('descripcion', currentProduct.description);
+    data.append('imagen', currentProduct.image);
+    data.append('id_usuario', userId);
+    data.append('id_producto', currentProduct.id); // Puede ser usado para verificar si ya existe
+    data.append('cantidad', quantity);
+
+    fetch('/Pagina_Web/guardar_producto.php', {
+        method: 'POST',
+        body: data
+    })
+    .then(res => res.text())
+    .then(response => {
+        console.log('Respuesta del servidor:', response);
+    }).catch(error => {
+        console.error('Error al guardar:', error);
+    });
+
+    alert("Producto agregado al carrito");
+
+    const modalElement = document.getElementById('dynamicModal');
+    const modalInstance = bootstrap.Modal.getInstance(modalElement);
+    modalInstance.hide();
+  });
+</script>
+
+<div id="chatbot-container">
+  <div id="chatbot-header">Asistente Virtual</div>
+  <div id="chatbot-messages"></div>
+  <div id="chatbot-input-container">
+    <input type="text" id="chatbot-input" placeholder="Escribe tu mensaje...">
+    <button id="chatbot-send">Enviar</button>
+  </div>
+</div>
+
+<button id="chatbot-toggle" aria-label="Abrir chat"><i class="fa-solid fa-comment-dots"></i></button>
+
+<script>
+     
+  const chatbotToggle = document.getElementById('chatbot-toggle');
+  const chatbotContainer = document.getElementById('chatbot-container');
+  const chatbotMessages = document.getElementById('chatbot-messages');
+  const chatbotInput = document.getElementById('chatbot-input');
+  const chatbotSend = document.getElementById('chatbot-send');
+
+   
+  chatbotToggle.addEventListener('click', () => {
+    chatbotContainer.style.display = (chatbotContainer.style.display === 'flex') ? 'none' : 'flex';
+  });
+
+  
+  function addMessage(text, sender = 'bot') {
+    const messageDiv = document.createElement('div');
+    messageDiv.classList.add('chatbot-message', sender);
+    messageDiv.textContent = text;
+    chatbotMessages.appendChild(messageDiv);
+    chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+  }
+ 
+  function locateProduct(productQuery) {
+    let found = false;
+ 
+    $('.product-item').each(function() {
+      let productName = $(this).find('.card').data('name') || $(this).find('.card-title').text();
+      if (productName.toLowerCase().includes(productQuery)) {
+      
+        $(this).addClass('highlight-product');
+        $('html, body').animate({ scrollTop: $(this).offset().top - 100 }, 800);
+        
+        setTimeout(() => {
+          $(this).removeClass('highlight-product');
+        }, 2000);
+        found = true;
+        return false;  
+      }
+    });
+    return found;
+  }
+  function getChatbotResponse(userMessage) {
+    const message = userMessage.toLowerCase();
+
+    if (message.includes("ubicar") || message.includes("localiza") || message.includes("dónde está") || message.includes("mostrar")) {
+      
+      let productQuery = message.replace(/(ubicar|localiza|dónde está|mostrar|el|la|los|las)/g, "").trim();
+      if (locateProduct(productQuery)) {
+        return `He localizado el producto "${productQuery}" en nuestra sección, desplazándome hacia él.`;
+      } else {
+        return `No pude encontrar un producto que coincida con "${productQuery}".`;
+      }
+    }
+    if (message.includes("hola") || message.includes("buenos")) {
+      return "¡Hola! Soy tu asistente virtual. Puedes preguntarme por productos, precios, promociones o pedirme que ubique algún producto.";
+    }
+    if (message.includes("precio")) {
+      return "Nuestros precios varían según el producto. Por ejemplo, algunos de nuestros productos inician en L. 90. ¿Hay algo en particular que buscas?";
+    }
+    if (message.includes("producto") || message.includes("productos")) {
+      return "Contamos con una amplia variedad de productos, desde medicamentos hasta artículos de cuidado personal. ¿Te interesa algo en específico?";
+    }
+    if (message.includes("promoción") || message.includes("oferta")) {
+      return "Actualmente tenemos ofertas exclusivas en algunos productos de cuidado. ¿Quieres conocer más sobre alguna promoción en particular?";
+    }
+    if (message.includes("horario")) {
+      return "Nuestro horario de atención es de 8:00 AM a 8:00 PM de lunes a sábado y de 9:00 AM a 2:00 PM los domingos.";
+    }
+    if (message.includes("dónde") || message.includes("ubicación") || message.includes("dirección")) {
+      return "Estamos ubicados en el centro de la ciudad, en la avenida principal. ¿Necesitas indicaciones?";
+    }
+    return "Lo siento, aún estoy aprendiendo y no entiendo completamente la pregunta. ¿Podrías reformularla o ser más específico?";
+  }
+  function sendMessage() {
+    const userMessage = chatbotInput.value.trim();
+    if (!userMessage) return;
+    addMessage(userMessage, 'user');
+    chatbotInput.value = "";
+    setTimeout(() => {
+      const response = getChatbotResponse(userMessage);
+      addMessage(response, 'bot');
+    }, 500);
+  }
+
+  chatbotSend.addEventListener('click', sendMessage);
+  chatbotInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') sendMessage();
+  });
+ 
+  addMessage("¡Bienvenido a Farmacia Ary-Ke! Pregunta por nuestros productos, precios, promociones o pídeme que te ubique algún producto.", 'bot');
+</script>
+
+
+<script>
+  const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+  const mobileNav = document.querySelector('.mobile-nav');
+
+  mobileMenuBtn.addEventListener('click', () => {
+    if (mobileNav.style.display === 'block') {
+      mobileNav.style.display = 'none';
+    } else {
+      mobileNav.style.display = 'block';
+    }
+  });
+
+  const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+  dropdownToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault(); 
+      e.stopPropagation();
+
+      const parentLi = toggle.closest('.has-dropdown');
+      parentLi.classList.toggle('open');
+    });
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.has-dropdown') && !e.target.closest('.mobile-menu-btn')) {
+      document.querySelectorAll('.has-dropdown.open').forEach(openLi => {
+        openLi.classList.remove('open');
+      });
+    }
+  });
+</script>
+
+<script>
+
+  const desktopDropdowns = document.querySelectorAll('.nav-bar .has-dropdown');
+  desktopDropdowns.forEach(dropdown => {
+    const link = dropdown.querySelector('a');
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      document.querySelectorAll('.nav-bar .has-dropdown.open').forEach(openItem => {
+        if (openItem !== dropdown) {
+          openItem.classList.remove('open');
+        }
+      });
+      dropdown.classList.toggle('open');
+    });
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.nav-bar .has-dropdown')) {
+      document.querySelectorAll('.nav-bar .has-dropdown.open').forEach(openItem => {
+        openItem.classList.remove('open');
+      });
+    }
+  });
+</script>
+
+<script src="../script.js"></script>
+ 
+
+
+
+</body>
+</html>

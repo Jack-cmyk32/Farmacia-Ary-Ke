@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cuidado del Niño</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+  <link rel="stylesheet" href="Bebe.css" />
+
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <div class="left-info">
+        <span class="green-text">SALA DE VENTAS</span>
+        <span class="blue-text">FARMACIA</span>
+        <span class="separator">|</span>
+        <i class="fas fa-phone"></i>
+        <span class="phones">+503 2247-8888 | +503 6785-6432</span>
+      </div>
+      <div class="right-info">
+        <ul>
+          <li><a href="#">Rastrear paquete</a></li>
+          <img src="../rastreo.png" alt="Logo Izquierdo" class="side-image">
+          <li><a href="#">Aplica a Tarjeta</a></li>
+          <img src="../tarjeta-de-credito.png" alt="Logo Izquierdo" class="side-image">
+          <li><a href="#">Registro</a></li>
+          <img src="../tarjeta-de-credito.png" alt="Logo Izquierdo" class="side-image">
+          <li><a href="">Iniciar sesión</a></li>
+          <img src="../perfil-del-usuario.png" alt="Logo Izquierdo" class="side-image">
+        </ul>
+      </div>
+    </div>
+
+   <div class="main-bar">
+    <div class="logo">
+      <a href="../index.html"><img src="../img/logo.png" alt="Logo Farmacia"></a>
+    </div>
+
+    <div class="account-cart">
+
+      <div class="cart-icon">
+        <a href="carrito.html">
+          <i class="fa fa-shopping-cart"></i>
+          <span id="cart-count"></span>
+        </a>
+      </div>
+    </div>
+  
+    <!-- Contenedor del buscador -->
+    <div class="search-container">
+      <div class="search-select-container">
+        <button class="search-dropdown-btn">
+          Buscar en <i class="fas fa-caret-down"></i>
+        </button>
+      </div>
+      <input 
+        type="text" 
+        class="search-input" 
+        placeholder="¿Qué producto está buscando?"
+      />
+      <button class="search-button">
+        <i class="fas fa-search"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="purchase-options">
+    <span>¿Cómo deseas comprar?</span>
+    <label>
+      <input type="radio" name="tipo-compra" value="domicilio" checked> 
+      A Domicilio
+    </label>
+    <label>
+      <input type="radio" name="tipo-compra" value="extranjero"> 
+      Envío al Extranjero
+    </label>
+    <label>
+      <input type="radio" name="tipo-compra" value="sucursal"> 
+      Recoger en Sucursal
+    </label>
+  </div>
+
+<nav class="nav-bar">
+  <ul>
+    <li class="has-dropdown">
+        <a href="../index.html">Categorías</a>
+        <ul class="dropdown">
+          <li><a href="Bebe.html">Bebé</a></li>
+          <li><a href="Diabetes.html">Hidratacion</a></li>
+          <li><a href="Cuidado.html">Cuidado Personal</a></li>
+        </ul>
+      </li>
+
+      <li class="has-dropdown">
+        <a href="">Servicios</a>
+        <ul class="dropdown">
+          <li><a href="Servicios.html">Consultoria Medico</a></li>
+        </ul>
+      </li>
+
+      <li class="has-dropdown">
+        <a href="Sucursal.html">Sucursales</a>
+        <ul class="dropdown">
+          <li><a href="Sucursal.html">Sucursal</a></li>
+        </ul>
+      </li>
+  
+      <li class="has-dropdown">
+        <a href="#">Beneficios</a>
+        <ul class="dropdown">
+          <li><a href="Beneficios.html">Mas</a></li>
+        </ul>
+      </li>
+      
+  </ul>
+</nav>
+  
+  <div class="mobile-menu-btn">
+    <i class="fa fa-bars"></i>
+  </div>
+  <nav class="mobile-nav">
+    <ul>
+      <li class="has-dropdown">
+        <a href="../index.html" class="dropdown-toggle">Categorías</a>
+          <ul class="dropdown">
+            <li><a href="SubMenus/Bebe.html">Bebé</a></li>
+            <li><a href="SubMenus/Diabetes.html">Hidratacion</a></li>
+            <li><a href="SubMenus/Cuidado.html">Cuidado Personal</a></li>
+          </ul>
+        </li>
+
+        <li class="has-dropdown">
+          <a href="#" class="dropdown-toggle">Servicios</a>
+          <ul class="dropdown">
+            <li><a href="Servicios.html">Consultorio Medico </a></li>
+          </ul>
+        </li>
+
+        <li class="has-dropdown">
+          <a href="Sucursal.html" class="dropdown-toggle">Sucursales</a>
+          <ul class="dropdown">
+            <li><a href="Sucursal.html">Sucursal</a></li>
+          </ul>
+        </li>
+  
+        <li class="has-dropdown">
+          <a href="#" class="dropdown-toggle">Beneficios</a>
+          <ul class="dropdown">
+            <li><a href="Beneficios.html">Mas</a></li>
+          </ul>
+        </li>
+    </ul>
+  </nav>
+</header>
+  
+<div class="container mt-4">
+  <h3 class="text-center mb-4">Productos para bebé</h3>
+ 
+  <div class="row">
+    <div class="col-md-3 product-item">
+      <div class="card" 
+           data-id="1" 
+           data-name="Pañal Bebé 80uni" 
+           data-price="520.50" 
+           data-description="Pañales Huggies Natural Care – Comodidad que se nota, protección que se siente
+           Diseñados para bebés activos y felices, estos pañales ofrecen hasta 12 horas de protección con una suavidad que parece nube. Vienen con tecnología Natural Care y un diseño anatómico que mantiene seco a tu pequeñín, sin sacrificar libertad de movimiento.
+           Y sí, hasta Winnie the Pooh los aprueba 🐻💛" 
+           data-img="../img/pañal.JPG">
+        <img src="../img/pañal.JPG" class="card-img-center" alt="Pañal para bebé" style="cursor: pointer;">
+        <div class="card-body text-center">
+          <h6 class="card-title">Pañal /Bebé 80uni</h6>
+          <p class="card-text">L. 520.50</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 product-item">
+      <div class="card" 
+           data-id="2" 
+           data-name="Vaselina Healing Jelly" 
+           data-price="150.20" 
+           data-description="Vaselina Healing Jelly – Protección que abraza la piel
+           La piel del bebé merece lo mejor, y esta vaselina es como un escudo suave contra la resequedad, rozaduras y molestias. Recomendada por pediatras, hipoalergénica y con fórmula pura, es el aliado perfecto para mantener la piel hidratada y feliz desde el primer día." 
+           data-img="../img/vaselina.JPG">
+        <img src="../img/vaselina.JPG" class="card-img-center" alt="Vaselina" style="cursor: pointer;">
+        <div class="card-body text-center">
+          <h6 class="card-title">Vaselina Healing Puro</h6>
+          <p class="card-text">L. 150.20</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 product-item">
+      <div class="card" 
+           data-id="3" 
+           data-name="Shampoo para Bebés Johnson’s" 
+           data-price="120.50" 
+           data-description="Shampoo para Bebés Johnson’s – Cero lágrimas, mil sonrisas
+           El clásico que nunca falla. Este shampoo está diseñado con una fórmula suave que no irrita los ojitos de tu bebé, dejándolo con el cabello limpio, suave y con ese olorcito irresistible a ternura. Perfecto para la rutina diaria de baño sin dramas ni llantos." 
+           data-img="../img/shampoo.jpg">
+        <img src="../img/shampoo.jpg" class="card-img-center" alt="Shampoo para Bebés Johnson’s" style="cursor: pointer;">
+        <div class="card-body text-center">
+          <h6 class="card-title">Shampo para Bebes</h6>
+          <p class="card-text">L. 120.50</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-md-3 product-item">
+      <div class="card" 
+           data-id="4" 
+           data-name="Biberón" 
+           data-price="180.10" 
+           data-description="Práctico, seguro y con un diseño tierno, este biberón es perfecto para los primeros sorbos de tu bebé. Con una capacidad de hasta 120 ml, tapa protectora y boquilla anatómica, es ideal para esos momentos en que el hambre no espera.
+           Porque sí, el amor también se sirve en biberón." 
+           data-img="../img/biberones.jfif">
+        <img src="../img/biberones.jfif" class="card-img-center" alt="Vaselina" style="cursor: pointer;">
+        <div class="card-body text-center">
+          <h6 class="card-title">Biberón</h6>
+          <p class="card-text">L. 180.10</p>
+        </div>
+      </div>
+    </div>
+
+        <p></p>
+    <div class="col-md-3 product-item">
+      <div class="card" 
+           data-id="5" 
+           data-name="Toallitas Húmedas Seventh Generation" 
+           data-price="115.80" 
+           data-description="Estas toallitas son como una caricia de mamá… pero en versión portátil. Hechas para cuidar hasta la piel más delicada, no contienen fragancias, alcohol ni ingredientes raros que nadie puede pronunciar.
+           Perfectas para limpiar sin preocuparse, porque lo natural siempre es mejor." 
+           data-img="../img/Toallita Humedas.jpg">
+        <img src="../img/Toallita Humedas.jpg" class="card-img-center" alt="VaselinaToallitas Húmedas Seventh Generation" style="cursor: pointer;">
+        <div class="card-body text-center">
+          <h6 class="card-title">Toallitas Húmedas Seventh Generation</h6>
+          <p class="card-text">L. 115.80</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 product-item">
+      <div class="card" 
+           data-id="6" 
+           data-name="Talco para Bebé Johnson’s" 
+           data-price="90.00" 
+           data-description="El clásico de confianza, ahora con un toque de lavanda relajante. Este talco calma, refresca y mantiene la piel del bebé suave y libre de humedad. Su fórmula con almidón de maíz puro y sin parabenos lo hace ideal incluso para las pieles más delicadas.
+           Porque después del baño, viene la magia… y un poquito de lavanda 💜" 
+           data-img="../img/talco.jpg">
+        <img src="../img/talco.jpg" class="card-img-center" alt="Talco para Bebé Johnson’s" style="cursor: pointer;">
+        <div class="card-body text-center">
+          <h6 class="card-title">Talco para Bebé Johnson’s</h6>
+          <p class="card-text">L. 90.00</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 product-item">
+      <div class="card" 
+           data-id="7" 
+           data-name="Aceite de Bebé Johnson’s" 
+           data-price="130.20" 
+           data-description="Este aceite es como un mimo embotellado. Ideal para hidratar la piel del bebé después del baño, creando una barrera de protección que retiene la humedad y deja un acabado suave y brillante.
+           Con su icónico aroma y textura ligera, es un favorito de generaciones" 
+           data-img="../img/Aceite de bebe.jpg">
+        <img src="../img/Aceite de bebe.jpg" class="card-img-center" alt="Aceite de Bebé Johnson’s" style="cursor: pointer;">
+        <div class="card-body text-center">
+          <h6 class="card-title">Aceite de Bebé Johnson’s</h6>
+          <p class="card-text">L. 130.20</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 product-item">
+      <div class="card" 
+           data-id="8" 
+           data-name="Agua Perfumada ISDIN Baby Naturals" 
+           data-price="130.20" 
+           data-description="Con un 95% de ingredientes de origen natural, esta agua perfumada es perfecta para refrescar y mimar la piel del bebé sin agredirla. Su delicada fragancia, ideal para el día a día, deja una sensación limpia, ligera y… ¡adorable!" 
+           data-img="../img/perfumeisdn.jpg">
+        <img src="../img/perfumeisdn.jpg" class="card-img-center" alt="Agua Perfumada ISDIN Baby Naturals" style="cursor: pointer;">
+        <div class="card-body text-center">
+          <h6 class="card-title">Agua Perfumada ISDIN Baby Naturals</h6>
+          <p class="card-text">L. 130.20</p>
+        </div>
+      </div>
+    </div>
+
+    <p></p>
+    <div class="col-md-3 product-item">
+      <div class="card" 
+           data-id="9" 
+           data-name="Champú ISDIN Baby Naturals" 
+           data-price="200.10" 
+           data-description="Con un 93% de ingredientes naturales, este gel champú limpia con suavidad sin irritar los ojitos ni la piel del bebé. Su fórmula hipoalergénica y sin jabón es ideal para usar todos los días, dejando el cabello suave, manejable y con un delicado aroma a ternura." 
+           data-img="../img/perfumeisdn.jpg">
+        <img src="../img/perfumeisdn.jpg" class="card-img-center" alt="Champú ISDIN Baby Naturals" style="cursor: pointer;">
+        <div class="card-body text-center">
+          <h6 class="card-title">Champú ISDIN Baby Naturals</h6>
+          <p class="card-text">L. 200.10</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 product-item">
+      <div class="card" 
+           data-id="10" 
+           data-name="Champú ISDIN Baby Naturals" 
+           data-price="210.10" 
+           data-description="El aliado ideal para la hora del baño. Este gel champú limpia con delicadeza gracias a su fórmula con 93% de ingredientes naturales. No irrita los ojitos, respeta el pH de la piel y deja el cabello del bebé tan suave que hasta el viento lo acaricia con más cuidado." 
+           data-img="../img/champu.jpg">
+        <img src="../img/champu.jpg" class="card-img-center" alt="Champú ISDIN Baby Naturals" style="cursor: pointer;">
+        <div class="card-body text-center">
+          <h6 class="card-title">Champú ISDIN Baby Naturals</h6>
+          <p class="card-text">L. 210.10</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 product-item">
+      <div class="card" 
+           data-id="11" 
+           data-name="Set Suavinex Cuidado de Piel" 
+           data-price="300.10" 
+           data-description="Este kit es el compañero ideal para las rutinas de cuidado diario. Incluye productos esenciales para la delicada piel del bebé, presentados en una práctica y encantadora bolsita de tela que combina estilo y funcionalidad. Perfecto para llevar de paseo o tener todo a mano en casa.
+           Porque consentir a tu bebé no debería requerir malabares." 
+           data-img="../img/MENTA.jpg">
+        <img src="../img/MENTA.jpg" class="card-img-center" alt="Set Suavinex Cuidado de Piel" style="cursor: pointer;">
+        <div class="card-body text-center">
+          <h6 class="card-title">Set Suavinex Cuidado de Piel</h6>
+          <p class="card-text">L. 300.10</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 product-item">
+      <div class="card" 
+           data-id="12" 
+           data-name="ISDIN A.G.E. Reverse" 
+           data-price="260.00" 
+           data-description="Esta crema facial antiedad combina potentes ingredientes para hidratar, reafirmar y revitalizar tu piel. Con su acción antipolución, remodeladora y antiglicación, es ideal para pieles que quieren lucir radiantes y bien cuidadas." 
+           data-img="../img/crema2.jpg">
+        <img src="../img/crema2.jpg" class="card-img-center" alt="ISDIN A.G.E. Reverse" style="cursor: pointer;">
+        <div class="card-body text-center">
+          <h6 class="card-title">ISDIN A.G.E. Reverse</h6>
+          <p class="card-text">L. 260.00</p>
+        </div>
+      </div>
+    </div>
+
+    <p></p>
+    <div class="col-md-3 product-item">
+      <div class="card" 
+           data-id="13" 
+           data-name="Eryplast Pasta al Agua" 
+           data-price="180.00" 
+           data-description="Especialmente formulada para proteger la delicada piel del bebé, esta crema crea una barrera que previene y alivia la irritación causada por el pañal. Con propiedades calmantes y una textura suave, es ideal para usar en cada cambio y mantener la piel sana y feliz." 
+           data-img="../img/eryplast.jpg">
+        <img src="../img/eryplast.jpg" class="card-img-center" alt="Eryplast Pasta al Agua" style="cursor: pointer;">
+        <div class="card-body text-center">
+          <h6 class="card-title">Eryplast Pasta al Agua</h6>
+          <p class="card-text">L. 180.00</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 product-item">
+      <div class="card" 
+           data-id="14" 
+           data-name="Aceite de Bebé Johnson’s" 
+           data-price="210.00" 
+           data-description="Este aceite suave está diseñado para atrapar hasta 10 veces más humedad en la piel del bebé*, dejándola tersa, protegida y con ese aroma adorable que solo Johnson’s sabe lograr. Perfecto para después del baño o masajes relajantes." 
+           data-img="../img/Aceite de bebe.jpg">
+        <img src="../img/Aceite de bebe.jpg" class="card-img-center" alt="Aceite de Bebé Johnson’s" style="cursor: pointer;">
+        <div class="card-body text-center">
+          <h6 class="card-title">Aceite de Bebé Johnson’s</h6>
+          <p class="card-text">L. 210.00</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 product-item">
+      <div class="card" 
+           data-id="15" 
+           data-name="Pomada ISDIN Nutracel" 
+           data-price="170.00" 
+           data-description="Especialmente formulada para cuidar y reparar la piel de la zona del pañal, Nutracel es la aliada perfecta contra irritaciones, rozaduras y enrojecimientos. Su uso diario mantiene la piel protegida, suave y libre de molestias." 
+           data-img="../img/pomada.jpg">
+        <img src="../img/pomada.jpg" class="card-img-center" alt="Pomada ISDIN Nutracel" style="cursor: pointer;">
+        <div class="card-body text-center">
+          <h6 class="card-title">Pomada ISDIN Nutracel</h6>
+          <p class="card-text">L. 170.00</p>
+        </div>
+      </div>
+    </div>
+      
+    <div class="col-md-3 product-item">
+      <div class="card" 
+           data-id="16" 
+           data-name="Baby Soap con Leche de Cabra y Miel" 
+           data-price="250.00" 
+           data-description="Este Baby Soap de RelaxBella no solo tiene una presentación adorable (con una cabrita tallada que te da ternura instantánea), sino que además viene cargado con lo mejor de la naturaleza: leche de cabra y miel. Dos ingredientes que suenan más a receta gourmet que a productos de baño, pero créeme, la piel lo agradece." 
+           data-img="../img/Jabon para bebe.jpg">
+        <img src="../img/Jabon para bebe.jpg" class="card-img-center" alt="Baby Soap con Leche de Cabra y Miel" style="cursor: pointer;">
+        <div class="card-body text-center">
+          <h6 class="card-title">Baby Soap con Leche de Cabra y Miel</h6>
+          <p class="card-text">L. 250.00</p>
+        </div>
+      </div>
+    </div>
+    </div>
+</div>
+
+<div class="modal fade" id="dynamicModal" tabindex="-1" aria-labelledby="dynamicModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="dynamicModalLabel"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+        <div class="modal-body d-flex flex-wrap">
+        <div class="col-md-6 text-center">
+          <img id="modalImage" src="" alt="" style="max-width: 100%;">
+        </div>
+        <div class="col-md-6">
+          <p id="modalDescription"></p>
+          <p id="modalPrecio"></p>
+          <label for="modalCantidad">Cantidad:</label>
+          <input type="number" id="modalCantidad" value="1" min="1" class="form-control" style="width:100px;margin-bottom:10px;">
+          <button class="btn btn-primary" id="btnAgregarCarrito">Agregar al carrito</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p></p>
+
+<footer>
+<div class="footer-top-border"></div>
+<div class="footer-content">
+  <div class="footer-column">
+    <h3>ENLACES</h3>
+    <ul>
+      <li><a href="#">Contáctanos</a></li>
+      <li><a href="#">Regístrate</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-column">
+    <h3>SÍGUENOS</h3>
+    <ul>
+      <li><a href="https://www.facebook.com/p/Venta-de-Medicamentos-Ary-Ke-100051160614467/"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
+      <li><a href=" "><i class="fa-brands fa-twitter"></i> Twitter</a></li>
+      <li><a href="https://juano8a.wixsite.com/website"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-column">
+    <h3>ATENCIÓN AL CLIENTE</h3>
+    <ul>
+      <li>Ubicación de Farmacias</li>
+      <li>Contáctanos a: <a href="mailto:sc@puntofarm.com">sc@puntofarm.com</a></li>
+      <li>Línea de atención: 2200-8800</li>
+    </ul>
+  </div>
+
+  <div class="footer-column certification">
+    <h3>NUESTRA CERTIFICACIÓN</h3>
+    <img src="../img/certi.png" alt="LegiScript Certified">
+  </div>
+
+  <div class="footer-column">
+    <h3>ACEPTAMOS</h3>
+    <div class="payment-logos">
+      <img src="../img/bac.png" alt="BAC">
+      <img src="../img/VISA.png" alt="Visa">
+      <img src="../img/master.png" alt="Mastercard">
+      <img src="../img/banpis.png" alt="BanPais">
+    </div>
+  </div>
+</div>
+
+<div class="footer-bottom">
+  <ul>
+    <li><a href="#">Mapa del Sitio</a></li>
+    <li><a href="#">Términos y Condiciones</a></li>
+    <li><a href="#">Política de protección de datos personales</a></li>
+  </ul>
+  <p>© 2025 - 2026 Universidad de San Pedro Sula</p>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+
+      function filtrarProductos() {
+          var terminoBusqueda = $('.search-input').val().toLowerCase().trim();
+          $('.product-item').each(function() {
+              var nombreProducto = $(this).find('.card').data('name') || $(this).find('.card-title').text();
+              if (nombreProducto) {
+                  nombreProducto = nombreProducto.toLowerCase();
+                  $(this).toggle(nombreProducto.indexOf(terminoBusqueda) > -1);
+              }
+          });
+      }
+
+      $('.search-button').on('click', filtrarProductos);
+      $('.search-input').on('input', filtrarProductos);
+  
+  });
+  </script>
+
+<script>  
+  function updateCartCount() {
+    let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    const totalCount = cartItems.reduce((acc, item) => acc + item.quantity, 0);
+    const cartCountEl = document.getElementById('cart-count');
+    if (cartCountEl) {
+      cartCountEl.textContent = totalCount;
+    }
+  }
+
+  updateCartCount();
+
+  let currentProduct = {};
+
+  document.querySelectorAll('.product-item .card img').forEach(img => {
+    img.addEventListener('click', function() {
+      const card = this.closest('.card');
+      const id = card.getAttribute('data-id');
+      const name = card.getAttribute('data-name');
+      const price = parseFloat(card.getAttribute('data-price'));
+      const description = card.getAttribute('data-description') || '';
+      const imgSrc = card.getAttribute('data-img') || this.getAttribute('src');
+
+      currentProduct = { id, name, price, description, image: imgSrc };
+
+      document.getElementById('dynamicModalLabel').textContent = name;
+      document.getElementById('modalImage').src = imgSrc;
+      document.getElementById('modalDescription').textContent = description;
+      document.getElementById('modalPrecio').textContent = 'L. ' + price.toFixed(2);
+      document.getElementById('modalCantidad').value = 1;
+
+      const modal = new bootstrap.Modal(document.getElementById('dynamicModal'));
+      modal.show();
+    });
+  });
+
+  document.getElementById('btnAgregarCarrito').addEventListener('click', function() {
+    const quantity = parseInt(document.getElementById('modalCantidad').value) || 1;
+    const productToAdd = { ...currentProduct, quantity };
+
+    let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    const existingIndex = cartItems.findIndex(item => item.id === productToAdd.id);
+
+    if (existingIndex !== -1) {
+        cartItems[existingIndex].quantity += quantity;
+    } else {
+        cartItems.push(productToAdd);
+    }
+
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    updateCartCount();
+
+    // Obtener id del usuario desde localStorage
+    const userId = localStorage.getItem('user_id');
+    if (!userId) {
+      alert("Error: no se encontró el ID del usuario.");
+      return;
+    }
+
+    // Guardar producto y carrito en la base de datos
+    const data = new FormData();
+    data.append('nombre', currentProduct.name);
+    data.append('precio', currentProduct.price);
+    data.append('descripcion', currentProduct.description);
+    data.append('imagen', currentProduct.image);
+    data.append('id_usuario', userId);
+    data.append('id_producto', currentProduct.id); // Puede ser usado para verificar si ya existe
+    data.append('cantidad', quantity);
+
+    fetch('/Pagina_Web/guardar_producto.php', {
+        method: 'POST',
+        body: data
+    })
+    .then(res => res.text())
+    .then(response => {
+        console.log('Respuesta del servidor:', response);
+    }).catch(error => {
+        console.error('Error al guardar:', error);
+    });
+
+    alert("Producto agregado al carrito");
+
+    const modalElement = document.getElementById('dynamicModal');
+    const modalInstance = bootstrap.Modal.getInstance(modalElement);
+    modalInstance.hide();
+  });
+</script>
+
+
+<script>
+  const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+  const mobileNav = document.querySelector('.mobile-nav');
+
+  mobileMenuBtn.addEventListener('click', () => {
+    if (mobileNav.style.display === 'block') {
+      mobileNav.style.display = 'none';
+    } else {
+      mobileNav.style.display = 'block';
+    }
+  });
+
+  const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+  dropdownToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault(); 
+      e.stopPropagation();
+
+      const parentLi = toggle.closest('.has-dropdown');
+      parentLi.classList.toggle('open');
+    });
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.has-dropdown') && !e.target.closest('.mobile-menu-btn')) {
+      document.querySelectorAll('.has-dropdown.open').forEach(openLi => {
+        openLi.classList.remove('open');
+      });
+    }
+  });
+</script>
+
+<script>
+  const desktopDropdowns = document.querySelectorAll('.nav-bar .has-dropdown');
+
+  desktopDropdowns.forEach(dropdown => {
+    const link = dropdown.querySelector('a');
+
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      document.querySelectorAll('.nav-bar .has-dropdown.open').forEach(openItem => {
+        if (openItem !== dropdown) {
+          openItem.classList.remove('open');
+        }
+      });
+
+      dropdown.classList.toggle('open');
+    });
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.nav-bar .has-dropdown')) {
+      document.querySelectorAll('.nav-bar .has-dropdown.open').forEach(openItem => {
+        openItem.classList.remove('open');
+      });
+    }
+  });
+</script>
+
+  </script>
+  
+  <div id="chatbot-container">
+    <div id="chatbot-header">Asistente Virtual</div>
+    <div id="chatbot-messages"></div>
+    <div id="chatbot-input-container">
+      <input type="text" id="chatbot-input" placeholder="Escribe tu mensaje...">
+      <button id="chatbot-send">Enviar</button>
+    </div>
+  </div>
+
+  <button id="chatbot-toggle" aria-label="Abrir chat"><i class="fa-solid fa-comment-dots"></i></button>
+   
+  <script>
+     
+    const chatbotToggle = document.getElementById('chatbot-toggle');
+    const chatbotContainer = document.getElementById('chatbot-container');
+    const chatbotMessages = document.getElementById('chatbot-messages');
+    const chatbotInput = document.getElementById('chatbot-input');
+    const chatbotSend = document.getElementById('chatbot-send');
+  
+     
+    chatbotToggle.addEventListener('click', () => {
+      chatbotContainer.style.display = (chatbotContainer.style.display === 'flex') ? 'none' : 'flex';
+    });
+  
+    
+    function addMessage(text, sender = 'bot') {
+      const messageDiv = document.createElement('div');
+      messageDiv.classList.add('chatbot-message', sender);
+      messageDiv.textContent = text;
+      chatbotMessages.appendChild(messageDiv);
+      chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+    }
+   
+    function locateProduct(productQuery) {
+      let found = false;
+   
+      $('.product-item').each(function() {
+        let productName = $(this).find('.card').data('name') || $(this).find('.card-title').text();
+        if (productName.toLowerCase().includes(productQuery)) {
+        
+          $(this).addClass('highlight-product');
+          $('html, body').animate({ scrollTop: $(this).offset().top - 100 }, 800);
+          
+          setTimeout(() => {
+            $(this).removeClass('highlight-product');
+          }, 2000);
+          found = true;
+          return false;  
+        }
+      });
+      return found;
+    }
+    function getChatbotResponse(userMessage) {
+      const message = userMessage.toLowerCase();
+  
+      if (message.includes("ubicar") || message.includes("localiza") || message.includes("dónde está") || message.includes("mostrar")) {
+        
+        let productQuery = message.replace(/(ubicar|localiza|dónde está|mostrar|el|la|los|las)/g, "").trim();
+        if (locateProduct(productQuery)) {
+          return `He localizado el producto "${productQuery}" en nuestra sección, desplazándome hacia él.`;
+        } else {
+          return `No pude encontrar un producto que coincida con "${productQuery}".`;
+        }
+      }
+      if (message.includes("hola") || message.includes("buenos")) {
+        return "¡Hola! Soy tu asistente virtual. Puedes preguntarme por productos, precios, promociones o pedirme que ubique algún producto.";
+      }
+      if (message.includes("precio")) {
+        return "Nuestros precios varían según el producto. Por ejemplo, algunos de nuestros productos inician en L. 90. ¿Hay algo en particular que buscas?";
+      }
+      if (message.includes("producto") || message.includes("productos")) {
+        return "Contamos con una amplia variedad de productos, desde medicamentos hasta artículos de cuidado personal. ¿Te interesa algo en específico?";
+      }
+      if (message.includes("promoción") || message.includes("oferta")) {
+        return "Actualmente tenemos ofertas exclusivas en algunos productos de cuidado. ¿Quieres conocer más sobre alguna promoción en particular?";
+      }
+      if (message.includes("horario")) {
+        return "Nuestro horario de atención es de 8:00 AM a 8:00 PM de lunes a sábado y de 9:00 AM a 2:00 PM los domingos.";
+      }
+      if (message.includes("dónde") || message.includes("ubicación") || message.includes("dirección")) {
+        return "Estamos ubicados en el centro de la ciudad, en la avenida principal. ¿Necesitas indicaciones?";
+      }
+      return "Lo siento, aún estoy aprendiendo y no entiendo completamente la pregunta. ¿Podrías reformularla o ser más específico?";
+    }
+    function sendMessage() {
+      const userMessage = chatbotInput.value.trim();
+      if (!userMessage) return;
+      addMessage(userMessage, 'user');
+      chatbotInput.value = "";
+      setTimeout(() => {
+        const response = getChatbotResponse(userMessage);
+        addMessage(response, 'bot');
+      }, 500);
+    }
+  
+    chatbotSend.addEventListener('click', sendMessage);
+    chatbotInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') sendMessage();
+    });
+   
+    addMessage("¡Bienvenido a Farmacia Ary-Ke! Pregunta por nuestros productos, precios, promociones o pídeme que te ubique algún producto.", 'bot');
+  </script>
+
+<script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Farmacia</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+  <link rel="stylesheet" href="beneficios.css" />
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Open+Sans:400,600&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <header>
+    <div class="top-bar">
+      <div class="left-info">
+        <span class="green-text">SALA DE VENTAS</span>
+        <span class="blue-text">FARMACIA</span>
+        <span class="separator">|</span>
+        <i class="fas fa-phone"></i>
+        <span class="phones">+503 2247-8888 | +503 6785-6432</span>
+      </div>
+      <div class="right-info">
+        <ul>
+          <li><a href="#">Rastrear paquete</a></li>
+          <img src="../rastreo.png" alt="Logo Izquierdo" class="side-image">
+          <li><a href="#">Aplica a Tarjeta Siman</a></li>
+          <img src="../tarjeta-de-credito.png" alt="Logo Izquierdo" class="side-image">
+          <li><a href="#">Registro</a></li>
+          <img src="../tarjeta-de-credito.png" alt="Logo Izquierdo" class="side-image">
+          <li><a href="">Iniciar sesión</a></li>
+          <img src="../perfil-del-usuario.png" alt="Logo Izquierdo" class="side-image">
+        </ul>
+      </div>
+    </div>
+  
+    <div class="main-bar">
+    
+      <div class="logo">
+        <a href="../index.html"><img src="../img/logo.png" alt="Logo Farmacia"></a>
+      </div>
+  
+      <div class="account-cart">
+
+        <div class="cart-icon">
+          <a href="./SubMenus/carrito.html">
+            <i class="fa fa-shopping-cart"></i>
+            <span id="cart-count"></span>
+          </a>
+        </div>
+      </div>
+  
+      <div class="search-container">
+        <div class="search-select-container">
+          <button class="search-dropdown-btn">
+            Buscar en <i class="fas fa-caret-down"></i>
+          </button>
+        </div>
+        <input 
+          type="text" 
+          class="search-input" 
+          placeholder="¿Qué producto está buscando?"
+        />
+        
+        <button class="search-button">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+    </div>
+  
+    <div class="purchase-options">
+      <span>¿Cómo deseas comprar?</span>
+      <label>
+        <input type="radio" name="tipo-compra" value="domicilio" checked> 
+        A Domicilio
+      </label>
+      <label>
+        <input type="radio" name="tipo-compra" value="extranjero"> 
+        Envío al Extranjero
+      </label>
+      <label>
+        <input type="radio" name="tipo-compra" value="sucursal"> 
+        Recoger en Sucursal
+      </label>
+    </div>
+
+    <nav class="nav-bar">
+      <ul>
+        <li class="has-dropdown">
+            <a href="SubMenus/Bebe.html">Categorías</a>
+            <ul class="dropdown">
+              <li><a href="../SubMenus/Bebe.html">Bebé</a></li>
+              <li><a href="../SubMenus/Diabetes.html">Hidratacion</a></li>
+              <li><a href="../SubMenus/Cuidado.html">Cuidado Personal</a></li>
+            </ul>
+          </li>
+  
+          <li class="has-dropdown">
+            <a href="Servicios.html">Servicios</a>
+            <ul class="dropdown">
+              <li><a href="Servicios.html">Consultorio Medico</a></li>
+            </ul>
+          </li>
+  
+          <li class="has-dropdown">
+            <a href="Sucursal.css">Sucursales</a>
+            <ul class="dropdown">
+              <li><a href="Sucursal.html">Sucursal</a></li>
+            </ul>
+          </li>
+  
+          <li class="has-dropdown">
+            <a href="#">Beneficios</a>
+            <ul class="dropdown">
+              <li><a href="../SubMenus/Beneficios.html">Mas</a></li>
+            </ul>
+          </li>
+      </ul>
+    </nav>
+  
+    <div class="mobile-menu-btn">
+      <i class="fa fa-bars"></i>
+    </div>
+    <nav class="mobile-nav">
+      <ul>
+        <li class="has-dropdown">
+          <a href="#" class="dropdown-toggle">Categorías</a>
+            <ul class="dropdown">
+              <li><a href="Bebe.html">Bebé</a></li>
+              <li><a href="SubMenus/Diabetes.html">Hidratacion</a></li>
+              <li><a href="SubMenus/Cuidado.html">Cuidado Personal</a></li>
+            </ul>
+          </li>
+
+          <li class="has-dropdown">
+            <a href="Servicios.html">Servicio</a>
+            <ul class="dropdown">
+              <li><a href="Servicios.html">Cuidado Personal</a></li>
+            </ul>
+          </li>
+
+          <li class="has-dropdown">
+            <a href="Sucursal.html" class="dropdown-toggle">Sucursales</a>
+            <ul class="dropdown">
+              <li><a href="Sucursal.html">Sucursal</a></li>
+            </ul>
+          </li>
+    
+          <li class="has-dropdown">
+            <a href="Beneficios.html" class="dropdown-toggle">Beneficios</a>
+            <ul class="dropdown">
+              <li><a href="../SubMenus/Beneficios.html">Mas</a></li>
+            </ul>
+          </li>
+      </ul>
+    </nav>
+  </header>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+      <h1>Beneficios Médicos</h1>
+      <p>Innovación y compromiso con tu salud</p>
+    </div>
+  </section>
+
+    <section id="beneficios" class="benefits-section">
+      <h2>Lo que Farmacia Vital te Ofrece</h2>
+      <p>Nuestro objetivo es mejorar tu calidad de vida ofreciendo una amplia gama de servicios y beneficios médicos innovadores y personalizados.</p>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <h3>Asesoría Farmacéutica Personalizada</h3>
+          <p>Recibe orientación experta sobre el uso adecuado de tus medicamentos y asesoría en la prevención de interacciones adversas.</p>
+        </div>
+        <div class="benefit-card">
+          <h3>Consultas de Telemedicina</h3>
+          <p>Conéctate en línea con profesionales de la salud para obtener recomendaciones y seguimiento sin salir de casa.</p>
+        </div>
+        <div class="benefit-card">
+          <h3>Programa de Salud Preventiva</h3>
+          <p>Participa en chequeos regulares y talleres de bienestar que te ayudan a detectar a tiempo posibles riesgos.</p>
+        </div>
+        <div class="benefit-card">
+          <h3>Gestión Integral de Medicamentos</h3>
+          <p>Opta por nuestro sistema de recordatorios y control de tratamiento, asegurando la adherencia a tus terapias.</p>
+        </div>
+        <div class="benefit-card">
+          <h3>Acceso a Productos Innovadores</h3>
+          <p>Descubre suplementos, productos naturales y dispositivos médicos de vanguardia para potenciar tu salud.</p>
+        </div>
+        <div class="benefit-card">
+          <h3>Programas de Fidelidad y Descuentos</h3>
+          <p>Aprovecha promociones exclusivas y recompensas especiales en una amplia variedad de servicios y productos.</p>
+        </div>
+        <div class="benefit-card">
+          <h3>Soporte en Enfermedades Crónicas</h3>
+          <p>Accede a un acompañamiento continuo y personalizado para el manejo de condiciones de salud a largo plazo.</p>
+        </div>
+        <div class="benefit-card">
+          <h3>Innovación en Salud Digital</h3>
+          <p>Utiliza nuestra plataforma para gestionar tu historial clínico, monitorear indicadores de salud y recibir consejos adaptados a tus necesidades.</p>
+        </div>
+      </div>
+    </div>
+    </section>
+
+  <footer>
+    <div class="footer-top-border"></div>
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3>ENLACES</h3>
+        <ul>
+          <li><a href="#">Contáctanos</a></li>
+          <li><a href="#">Regístrate</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>SÍGUENOS</h3>
+        <ul>
+          <li><a href="https://www.facebook.com/p/Venta-de-Medicamentos-Ary-Ke-100051160614467/"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
+          <li><a href=" "><i class="fa-brands fa-twitter"></i> Twitter</a></li>
+          <li><a href="https://juano8a.wixsite.com/website"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>ATENCIÓN AL CLIENTE</h3>
+        <ul>
+          <li>Ubicación de Farmacias</li>
+          <li>Contáctanos a: <a href="mailto:sc@puntofarm.com">sc@puntofarm.com</a></li>
+          <li>Línea de atención: 2200-8800</li>
+        </ul>
+      </div>
+
+    
+      <div class="footer-column certification">
+        <h3>NUESTRA CERTIFICACIÓN</h3>
+        <img src="../img/certi.png" alt="LegiScript Certified">
+      </div>
+    
+      <div class="footer-column">
+        <h3>ACEPTAMOS</h3>
+        <div class="payment-logos">
+          <img src="../img/bac.png" alt="BAC">
+          <img src="../img/VISA.png" alt="Visa">
+          <img src="../img/master.png" alt="Mastercard">
+          <img src="../img/banpis.png" alt="BanPais">
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <ul>
+        <li><a href="#">Mapa del Sitio</a></li>
+        <li><a href="#">Términos y Condiciones</a></li>
+        <li><a href="#">Política de protección de datos personales</a></li>
+      </ul>
+      <p>© 2025 - 2026 Universidad de San Pedro Sula</p>
+    </div>
+
+   
+    
+  </footer>
+ 
+  <script>
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const mobileNav = document.querySelector('.mobile-nav');
+  
+    mobileMenuBtn.addEventListener('click', () => {
+      if (mobileNav.style.display === 'block') {
+        mobileNav.style.display = 'none';
+      } else {
+        mobileNav.style.display = 'block';
+      }
+    });
+  
+    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+    dropdownToggles.forEach(toggle => {
+      toggle.addEventListener('click', (e) => {
+        e.preventDefault(); 
+        e.stopPropagation();
+  
+        const parentLi = toggle.closest('.has-dropdown');
+        parentLi.classList.toggle('open');
+      });
+    });
+  
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.has-dropdown') && !e.target.closest('.mobile-menu-btn')) {
+        document.querySelectorAll('.has-dropdown.open').forEach(openLi => {
+          openLi.classList.remove('open');
+        });
+      }
+    });
+  </script>
+
+<script>
+  const desktopDropdowns = document.querySelectorAll('.nav-bar .has-dropdown');
+
+  desktopDropdowns.forEach(dropdown => {
+    const link = dropdown.querySelector('a');
+
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+ 
+      document.querySelectorAll('.nav-bar .has-dropdown.open').forEach(openItem => {
+        if (openItem !== dropdown) {
+          openItem.classList.remove('open');
+        }
+      });
+
+      dropdown.classList.toggle('open');
+    });
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.nav-bar .has-dropdown')) {
+      document.querySelectorAll('.nav-bar .has-dropdown.open').forEach(openItem => {
+        openItem.classList.remove('open');
+      });
+    }
+  });
+</script>
+
+ 
+   
+   
+
+
+
+</body>
+</html>

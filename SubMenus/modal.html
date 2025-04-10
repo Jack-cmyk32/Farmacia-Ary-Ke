@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tienda - Carrito de Compras</title>
+  <link rel="stylesheet" href="modal.css">
+</head>
+<body> 
+  <header>
+    <button onclick="abrirCarrito()">Carrito (<span id="contador-carrito">0</span>)</button>
+  </header>
+
+  <div class="productos">
+
+    <div class="producto">
+      <img src="logo.jpg" 
+           alt="CICAPLAST Baume B5+ SPF 50" 
+           onclick="abrirModalProducto('CICAPLAST Baume B5+ SPF 50', 'ruta/de/tu/imagen.png', 13.11, 'Bálsamo multifunción para calmar y proteger la piel')"
+           class="imagen-producto"/>
+      <p>CICAPLAST Baume B5+ SPF 50</p>
+    </div>
+  </div>
+
+
+  <div id="modalProducto" class="modal">
+    <div class="modal-contenido">
+      <span class="cerrar" onclick="cerrarModalProducto()">&times;</span>
+      <img id="img-modal" src="" alt="Producto" />
+      <h2 id="nombre-modal">Nombre del Producto</h2>
+      <p id="desc-modal">Descripción del Producto</p>
+      <p><strong>Precio:</strong> €<span id="precio-modal">0</span></p>
+      <button onclick="agregarAlCarrito()">Añadir al carrito</button>
+    </div>
+  </div>
+
+  <div id="modalCarrito" class="modal">
+    <div class="modal-contenido">
+      <span class="cerrar" onclick="cerrarCarrito()">&times;</span>
+      <h2>Tu Carrito</h2>
+      <div id="contenido-carrito">
+      </div>
+      <button id="pagar-btn" onclick="pagar()">Pagar</button>
+    </div>
+  </div>
+
+  <script src="modal.js"></script>
+</body>
+</html>

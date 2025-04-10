@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Carrito de Compras</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="carrito.css">
+  <style>
+    
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="top-bar" role="banner">
+      <div class="left-info">
+        <span class="green-text">SALA DE VENTAS</span>
+        <span class="blue-text">FARMACIA</span>
+        <span class="separator">|</span>
+        <i class="bi bi-telephone"></i>
+        <span class="phones">+503 2247-8888 | +503 6785-6432</span>
+      </div>
+      <div class="right-info">
+        <ul>
+          <li>
+            <a href="#" aria-label="Rastrear paquete">
+              <i class="bi bi-truck"></i> Rastrear paquete
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="Aplica a Tarjeta Siman">
+              <i class="bi bi-credit-card"></i> Aplica a Tarjeta
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="Registrarse">
+              <i class="bi bi-pencil-square"></i> Registro
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="Iniciar sesión">
+              <i class="bi bi-person"></i> Iniciar sesión
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Barra principal -->
+    <div class="main-bar">
+      <div class="logo">
+        <a href="../index.html"><img src="../img/logo.png" alt="Logo Farmacia"></a>
+      </div>
+
+      <!-- Buscador con autocompletar -->
+      <div class="search-container" role="search">
+        <div class="search-select-container">
+          <button class="search-dropdown-btn" aria-haspopup="true">
+            Buscar en <i class="bi bi-caret-down-fill"></i>
+          </button>
+        </div>
+        <input type="text" class="search-input" placeholder="¿Qué producto estás buscando?" list="suggestions" aria-label="Buscar producto">
+        <datalist id="suggestions">
+          <option value="Paracetamol">
+          <option value="Ibuprofeno">
+          <option value="Vitamina C">
+          <option value="Antibióticos">
+        </datalist>
+        <button class="search-button" aria-label="Buscar"><i class="bi bi-search"></i></button>
+      </div>
+      
+<p></p>
+      <!-- Carrito y toggle de modo oscuro -->
+      <div class="account-cart">
+        <div class="cart-icon">
+          <a href="carrito.html" aria-label="Ver carrito">
+            <i class="bi bi-cart-fill"></i>
+            <span id="cart-count"></span>
+          </a>
+        </div>
+        <p></p>
+        <p></p>
+        <button id="darkModeToggle" class="btn btn-sm btn-outline-secondary" aria-label="Toggle Dark Mode">
+          <i class="bi bi-moon"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contenido principal -->
+  <main class="container cart-container">
+    <h2 class="mb-4">Carrito de Compra</h2>
+    <div class="table-responsive">
+      <table class="table table-striped" id="tablaCarrito">
+        <thead class="table-dark">
+          <tr>
+            <th scope="col">Imagen</th>
+            <th scope="col">Producto</th>
+            <th scope="col">Precio (L.)</th>
+            <th scope="col">Cantidad</th>
+            <th scope="col">Subtotal (L.)</th>
+            <th scope="col">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+       
+        </tbody>
+      </table>
+    </div>
+    <div class="d-flex justify-content-between align-items-center mt-4">
+      <h4>Total: L. <span id="totalGeneral">0.00</span></h4>
+      <div>
+        <button class="btn btn-outline-danger me-2" id="btnVaciarCarrito">
+          <i class="bi bi-trash"></i> Vaciar Carrito
+        </button>
+        <button class="btn btn-primary" id="btnPagar">
+          <i class="bi bi-credit-card"></i> Pagar
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal de Pago -->
+  <div class="modal fade" id="pagoModal" tabindex="-1" aria-labelledby="pagoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content shadow">
+        <div class="modal-header">
+          <h5 class="modal-title" id="pagoModalLabel">Método de Pago</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <form id="formPago" novalidate>
+            <div class="mb-3">
+              <label for="numTarjeta" class="form-label">Número de Tarjeta</label>
+              <input type="text" class="form-control" id="numTarjeta" placeholder="XXXX-XXXX-XXXX-XXXX" required>
+              <div class="invalid-feedback">
+                Por favor ingrese un número de tarjeta válido.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="nombreTarjeta" class="form-label">Nombre en la Tarjeta</label>
+              <input type="text" class="form-control" id="nombreTarjeta" required>
+              <div class="invalid-feedback">
+                Ingrese el nombre tal como aparece en la tarjeta.
+              </div>
+            </div>
+            <div class="row">
+              <div class="mb-3 col-6">
+                <label for="fechaExp" class="form-label">Fecha de Expiración</label>
+                <input type="text" class="form-control" id="fechaExp" placeholder="MM/AA" required>
+                <div class="invalid-feedback">
+                  Ingrese una fecha de expiración válida.
+                </div>
+              </div>
+              <div class="mb-3 col-6">
+                <label for="cvv" class="form-label">CVV</label>
+                <input type="password" class="form-control" id="cvv" placeholder="123" required>
+                <div class="invalid-feedback">
+                  Ingrese el código CVV.
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-success w-100" id="btnSubmitPago">
+              <span id="btnSubmitText">Pagar</span>
+              <span id="spinner" class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="confirmacionModal" tabindex="-1" aria-labelledby="confirmacionModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content shadow">
+        <div class="modal-header">
+          <h5 class="modal-title" id="confirmacionModalLabel">Pago Exitoso</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body text-center">
+          <p>¡Tu pago se ha procesado correctamente!</p>
+          <button class="btn btn-primary" id="btnDescargarFactura">Descargar Factura (PDF)</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script>
+    (() => {
+      'use strict';
+      const darkModeToggle = document.getElementById('darkModeToggle');
+      darkModeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-theme');
+        const icon = darkModeToggle.querySelector('i');
+        icon.classList.toggle('bi-moon');
+        icon.classList.toggle('bi-sun');
+      });
+
+ 
+      function updateCartCount() {
+        let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        const totalCount = cartItems.reduce((acc, item) => acc + item.quantity, 0);
+        const cartCountEl = document.getElementById('cart-count');
+        if (cartCountEl) {
+          cartCountEl.textContent = totalCount;
+        }
+      }
+      document.addEventListener('DOMContentLoaded', () => {
+      let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+      const tablaCarritoBody = document.querySelector('#tablaCarrito tbody');
+      const totalGeneralSpan = document.getElementById('totalGeneral');
+  
+    function renderCart() {
+    tablaCarritoBody.innerHTML = '';
+    let total = 0;
+    cartItems.forEach((item, index) => {
+      const subtotal = item.price * item.quantity;
+      total += subtotal;
+      const row = document.createElement('tr');
+      row.classList.add('fade-in');
+      row.innerHTML = `
+        <td><img src="${item.image}" alt="${item.name}" class="img-fluid" style="max-width:60px; border-radius: 4px;"></td>
+        <td>${item.name}</td>
+        <td>${item.price.toFixed(2)}</td>
+        <td>${item.quantity}</td>
+        <td>${subtotal.toFixed(2)}</td>
+        <td><button class="btn btn-sm btn-danger" data-index="${index}" aria-label="Eliminar producto"><i class="bi bi-x-circle"></i></button></td>
+      `;
+      tablaCarritoBody.appendChild(row);
+    });
+    totalGeneralSpan.textContent = total.toFixed(2);
+  }
+  
+  renderCart();
+  updateCartCount();
+        
+      
+  tablaCarritoBody.addEventListener('click', (e) => {
+    if (e.target.closest('.btn-danger')) {
+      const index = e.target.closest('.btn-danger').getAttribute('data-index');
+      cartItems.splice(index, 1);
+      localStorage.setItem('cartItems', JSON.stringify(cartItems));
+      renderCart();
+      updateCartCount();
+    }
+  });
+        
+        
+        document.getElementById('btnVaciarCarrito').addEventListener('click', () => {
+          cartItems = [];
+          localStorage.setItem('cartItems', JSON.stringify(cartItems));
+          renderCart();
+          updateCartCount();
+        });
+        
+        
+        document.getElementById('btnPagar').addEventListener('click', () => {
+          if (cartItems.length === 0) {
+            alert('El carrito está vacío.');
+            return;
+          }
+          const pagoModal = new bootstrap.Modal(document.getElementById('pagoModal'));
+          pagoModal.show();
+        });
+        
+       
+        document.getElementById('formPago').addEventListener('submit', (e) => {
+          e.preventDefault();
+          const form = e.target;
+          if (!form.checkValidity()) {
+            form.classList.add('was-validated');
+            return;
+          }
+          const btnSubmitPago = document.getElementById('btnSubmitPago');
+          const spinner = document.getElementById('spinner');
+          const btnSubmitText = document.getElementById('btnSubmitText');
+          spinner.classList.remove('d-none');
+          btnSubmitPago.disabled = true;
+          btnSubmitText.textContent = 'Procesando...';
+           
+          setTimeout(() => {
+            sessionStorage.setItem('facturaData', JSON.stringify(cartItems));
+            cartItems = [];
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            renderCart();
+            updateCartCount();
+            const pagoModalEl = document.getElementById('pagoModal');
+            const pagoModalInstance = bootstrap.Modal.getInstance(pagoModalEl);
+            pagoModalInstance.hide();
+            spinner.classList.add('d-none');
+            btnSubmitPago.disabled = false;
+            btnSubmitText.textContent = 'Pagar';
+            const confirmModal = new bootstrap.Modal(document.getElementById('confirmacionModal'));
+            confirmModal.show();
+          }, 2000);
+        });
+      });
+      
+      
+      document.getElementById('btnDescargarFactura').addEventListener('click', () => {
+        let facturaData = JSON.parse(sessionStorage.getItem('facturaData')) || [];
+        let subtotal = 0;
+        facturaData.forEach(item => {
+          subtotal += item.price * item.quantity;
+        });
+        const tax = subtotal * 0.15;
+        const total = subtotal + tax;
+        
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF({ unit: "pt", format: "letter" });
+        
+        // Encabezado
+        doc.setFont("helvetica", "bold");
+        doc.setFontSize(14);
+        doc.text("FACTURA #12345", 40, 40);
+        doc.setFontSize(10);
+        doc.setFont("helvetica", "normal");
+        doc.text("1 de diciembre de 2028", 40, 55);
+        doc.setFont("helvetica", "bold");
+        doc.setFontSize(18);
+        doc.text("FACTURA", 400, 40);
+        doc.setFontSize(10);
+        doc.setFont("helvetica", "normal");
+        doc.text("Farmacia Ary-ke", 400, 55);
+        doc.text("Tel: (504) 9999-9999", 400, 70);
+        doc.text("Email: info@aryke.com", 400, 85);
+        
+        // Datos del cliente
+        doc.setFont("helvetica", "bold");
+        doc.setFontSize(10);
+        doc.text("Tel. del cliente:", 40, 90);
+        doc.setFont("helvetica", "normal");
+        doc.text("(312) 123-4567", 120, 90);
+        doc.setFont("helvetica", "bold");
+        doc.text("Dirección del cliente:", 40, 105);
+        doc.setFont("helvetica", "normal");
+        doc.text("Calle Madero 123, Centro, Colima 28000", 140, 105);
+        doc.setLineWidth(0.5);
+        doc.line(40, 115, 570, 115);
+        
+        // Tabla de Items
+        doc.setFont("helvetica", "bold");
+        doc.text("ITEM", 40, 135);
+        doc.text("CANTIDAD", 240, 135);
+        doc.text("PRECIO UNIT.", 340, 135);
+        doc.text("TOTAL", 460, 135);
+        
+        let yPos = 150;
+        doc.setFont("helvetica", "normal");
+        facturaData.forEach((item) => {
+          const itemTotal = item.price * item.quantity;
+          doc.text(item.name, 40, yPos, { maxWidth: 160 });
+          doc.text(String(item.quantity), 260, yPos);
+          doc.text(`L. ${item.price.toFixed(2)}`, 360, yPos);
+          doc.text(`L. ${itemTotal.toFixed(2)}`, 480, yPos);
+          yPos += 15;
+        });
+        doc.line(40, yPos + 5, 570, yPos + 5);
+        
+        // Totales
+        yPos += 25;
+        doc.setFont("helvetica", "bold");
+        doc.text(`Subtotal: L. ${subtotal.toFixed(2)}`, 400, yPos);
+        yPos += 15;
+        doc.text(`Impuesto (15%): L. ${tax.toFixed(2)}`, 400, yPos);
+        yPos += 15;
+        doc.text(`Total: L. ${total.toFixed(2)}`, 400, yPos);
+        
+        // Información de pago
+        yPos += 40;
+        doc.setFontSize(12);
+        doc.setFont("helvetica", "bold");
+        doc.text("INFORMACIÓN PARA EL PAGO", 40, yPos);
+        yPos += 15;
+        doc.setFont("helvetica", "normal");
+        doc.setFontSize(10);
+        doc.text("Banco D'Or", 40, yPos);
+        yPos += 15;
+        doc.text("Número de cuenta: 123-45-6-789-0", 40, yPos);
+        yPos += 15;
+        doc.text("Referencia de pago: Use su número de factura #12345", 40, yPos);
+        
+        // Datos de la Farmacia
+        yPos += 40;
+        doc.setFont("helvetica", "bold");
+        doc.text("FARMACIA ARY-KE", 40, yPos);
+        doc.setFont("helvetica", "normal");
+        yPos += 15;
+        doc.text("Dirección: Barrio Centro, SPS, Honduras", 40, yPos);
+        yPos += 15;
+        doc.text("Teléfono: (504) 9999-9999", 40, yPos);
+        yPos += 15;
+        doc.text("Sitio web: www.farmaciaaryke.hn", 40, yPos);
+        
+        doc.save("factura.pdf");
+      });
+    })();
+  </script>
+</body>
+</html>
